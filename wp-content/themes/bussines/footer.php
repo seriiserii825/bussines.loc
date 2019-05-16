@@ -6,26 +6,18 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package bussines
+ * @package Business
  */
 
 ?>
 
 	</div><!-- #content -->
 
-	<footer id="colophon" class="site-footer">
+	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'bussines' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'bussines' ), 'WordPress' );
-				?>
-			</a>
+			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'artbt' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'artbt' ), 'WordPress' ); ?></a>
 			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'bussines' ), 'bussines', '<a href="http://underscores.me/">Underscores.me</a>' );
-				?>
+			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'artbt' ), 'artbt', '<a href="https://automattic.com/" rel="designer">Artem</a>' ); ?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->

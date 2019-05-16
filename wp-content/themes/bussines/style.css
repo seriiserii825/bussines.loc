@@ -1,14 +1,28 @@
-/*!
-Theme Name: bussines
-Theme URI: seriiburduja@gmail.com
-Author: serii
-Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
-*/
+/*
+Theme Name: Business
+Theme URI: http://underscores.me/
+Author: Artem
+Author URI: http://underscores.me/
+Description: Description
+Version: 1.0.1
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: artbt
+Tags:
 
-@charset "UTF-8";
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+Business is based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
+*/
+/* @charset "UTF-8";
 @import url(animate.css);
 @import url(http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css);
-@import url(http://fonts.googleapis.com/css?family=Roboto:400,500,700);
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,500,700); */
 /*========================================================
 					  Main Styles
 =========================================================*/
@@ -132,7 +146,17 @@ hr {
 .mg-add {
   margin-top: 18px;
 }
-
+input[type="email"], input[type="number"], input[type="password"], input[type="tel"], input[type="url"], input[type="text"] {
+    padding: 10px;
+    margin-bottom: 5px;
+    width: 94%;
+    display: inline-block;
+}
+input[type="submit"]{
+    padding: 10px;
+    border: 0;
+    text-transform: uppercase;
+}
 /*=======================================================
 					   Main Layout
 =========================================================*/
@@ -248,10 +272,34 @@ p + .btn_wr {
   font-size: 24px;
   vertical-align: bottom;
 }
+
 .brand a:hover {
   color: inherit;
 }
-
+.brand img{
+    max-height: 50px;
+}
+.white-popup-block{
+    position: relative;
+    background: #FFF;
+    padding: 40px 50px 20px;
+    width: auto;
+    max-width: 30%;
+    margin: 20px auto;
+}
+#header-feedback-form input[type="submit"]{
+    display: inline-block;
+    width: 100%;
+    padding: 10px;
+    border: 0;
+    color: #fff;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    background: #0a7c88;
+}
+header .container > p > .fa {
+  vertical-align: baseline;
+}
 /*==================  Backgrounds  ======================*/
 .bg-primary {
   color: #fff;
@@ -1180,38 +1228,35 @@ header {
 header .brand {
   float: left;
 }
-header .brand img {
-	max-height: 50px;
-}
-header a[href^="callto:"],
+header a[href^="tel:"],
 header .container > p {
   clear: right;
   float: right;
 }
-header a[href^="callto:"] {
+header a[href^="tel:"] {
   margin-top: 7px;
   position: relative;
   font-size: 24px;
   color: #777777;
 }
-header a[href^="callto:"]:before {
+header a[href^="tel:"]:before {
   position: absolute;
   top: -4px;
   left: -44px;
   font-size: 34px;
   color: #6bc7ed;
 }
-header a[href^="callto:"]:hover {
+header a[href^="tel:"]:hover {
   color: map;
 }
-header a[href^="callto:"] + p {
+header a[href^="tel:"] + p {
   margin-top: 7px;
 }
 @media (max-width: 979px) {
   header {
     text-align: center;
   }
-  header .brand, header a[href^="callto:"], header .container > p {
+  header .brand, header a[href^="tel:"], header .container > p {
     float: none;
   }
   header .brand {
@@ -1220,7 +1265,7 @@ header a[href^="callto:"] + p {
   header .brand_slogan {
     padding-left: 0;
   }
-  header a[href^="callto:"] {
+  header a[href^="tel:"] {
     display: inline-block;
     margin-top: 20px;
   }
@@ -1251,7 +1296,7 @@ main p + a[href^="mailto:"]:hover {
   text-decoration: underline;
 }
 
-a[href^="callto:"]:hover {
+a[href^="tel:"]:hover {
   color: #62bfe6;
 }
 
@@ -1330,30 +1375,4 @@ footer .copyright a:hover {
   footer .copyright {
     text-align: center;
   }
-}
-
-.white-popup {
-  position: relative;
-  background: #FFF;
-  padding: 38px 20px 20px;
-  width: 360px;
-  max-width: 500px;
-  margin: 20px auto;
-	background: #f6f6f6;
-}
-
-.feedback input {
-	margin-bottom: 10px;
-	padding: 0 15px;
-	width: 100%;
-	height: 30px;
-	line-height: 30px;
-	border: 1px solid lightgray;
-	box-sizing: border-box;
-}
-
-.feedback__button input[type="submit"] {
-	width: 100%;
-	background: lightblue;
-	cursor: pointer;
 }
