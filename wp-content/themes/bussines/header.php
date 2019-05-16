@@ -21,38 +21,29 @@
 </head>
 
 <body <?php body_class(); ?>>
-<div id="page" class="site">
+<div id="page" class="site page">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'bussines' ); ?></a>
 
-	<header id="masthead" class="site-header">
-		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php
-			else :
-				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
-			$bussines_description = get_bloginfo( 'description', 'display' );
-			if ( $bussines_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $bussines_description; /* WPCS: xss ok. */ ?></p>
-			<?php endif; ?>
-		</div><!-- .site-branding -->
+	<header>
+		<div class="container">
+			<div class="brand">
+				<?php if(is_front_page() && is_home()): ?>
+					<?php if(ot_get_option('logo_upload')): ?>
+							<h1 class="brand_name">
+								<img src="<?php echo ot_get_option('logo_upload'); ?>" alt="">
+							</h1>
+						<?php else: ?>
+							<h1 class="brand_name"><?php bloginfo('name'); ?></h1>
+					<?php endif; ?>
+				<?php else: ?>
+					<div class="brand_name"><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></div>
+				<?php endif; ?>
 
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'bussines' ); ?></button>
-			<?php
-			wp_nav_menu( array(
-				'theme_location' => 'menu-1',
-				'menu_id'        => 'primary-menu',
-			) );
-			?>
-		</nav><!-- #site-navigation -->
+				<?php if(ot_get_option('description_on_off') === 'on') : ?>
+					<p class="brand_slogan"><?php bloginfo('description'); ?></p>
+				<?php endif; ?>
+			</div>
+		</div>
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">

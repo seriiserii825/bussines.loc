@@ -1,5 +1,16 @@
 <?php
 /**
+ * Required: set 'ot_theme_mode' filter to true.
+ */
+add_filter( 'ot_theme_mode', '__return_true' );
+add_filter( 'ot_show_new_layout', '__return_true' );
+
+/**
+ * Required: include OptionTree.
+ */
+require( trailingslashit( get_template_directory() ) . 'option-tree/ot-loader.php' );
+
+/**
  * bussines functions and definitions
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
@@ -67,9 +78,14 @@ if ( ! function_exists( 'bussines_setup' ) ) :
 			'flex-width'  => true,
 			'flex-height' => true,
 		) );
+
 	}
 endif;
+
 add_action( 'after_setup_theme', 'bussines_setup' );
+
+require( trailingslashit( get_template_directory() ) . '/functions/theme-options.php');
+require( trailingslashit( get_template_directory() ) . '/functions/meta-boxes.php');
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -97,15 +113,23 @@ function bussines_widgets_init() {
 }
 add_action( 'widgets_init', 'bussines_widgets_init' );
 
+function bussines_styles() {
+	wp_enqueue_style('bussines-grid', get_stylesheet_directory_uri().'/css/grid.css');
+	wp_enqueue_style('bussines-style', get_stylesheet_uri());
+	wp_enqueue_style( 'font', 'http://fonts.googleapis.cora/css ?family=Roboto:400,500,700');
+	wp_enqueue_style( 'font-awesome', 'http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
+	wp_enqueue_style('bussines-animate', get_stylesheet_directory_uri().'/css/animate.css');
+	wp_enqueue_style('bussines-colorScheme-2', get_stylesheet_directory_uri().'/css/colorScheme-2.css');
+	wp_enqueue_style('bussines-owl-carousel', get_stylesheet_directory_uri().'/css/owl-carousel.css');
+}
+add_action( 'wp_enqueue_scripts', 'bussines_styles' );
+
 /**
  * Enqueue scripts and styles.
  */
 function bussines_scripts() {
-	wp_enqueue_style( 'bussines-style', get_stylesheet_uri() );
 
-	wp_enqueue_script( 'bussines-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
-
-	wp_enqueue_script( 'bussines-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
+	wp_enqueue_script( 'bussines-scripts', get_template_directory_uri() . '/js/script.js', array('jquery'), '', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
