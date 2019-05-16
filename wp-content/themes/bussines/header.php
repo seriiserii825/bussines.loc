@@ -43,7 +43,33 @@
 					<p class="brand_slogan"><?php bloginfo('description'); ?></p>
 				<?php endif; ?>
 			</div>
-		</div>
+
+			<?php
+				$phone_link = ot_get_option('contacts_phone');
+				$clear_phone_link = str_replace(['-', '(', ')'], '', $phone_link);
+			?>
+			<a href="callto:<?php echo $clear_phone_link; ?>" class="fa-phone">
+				<?php if(ot_get_option('contacts_phone')): ?>
+					<?php echo ot_get_option('contacts_phone'); ?>
+				<?php endif; ?>
+			</a>
+			<p contacts__open>
+				<?php if(ot_get_option('contacts_open')): ?>
+					<?php echo ot_get_option('contacts_open'); ?>
+				<?php endif; ?>
+			</p>
+			<p class="feedback">
+				<?php if(ot_get_option('feedback_title')): ?>
+					<a href="#feedback__popup" class="feedback__link"><?php echo ot_get_option('feedback_title'); ?></a>
+				<?php endif; ?>
+
+				<div id="feedback__popup" class="white-popup mfp-hide">
+					<?php if(ot_get_option('feedback_shortcode')): ?>
+						<?php echo do_shortcode(ot_get_option('feedback_shortcode')); ?>
+					<?php endif; ?>
+				</div>
+			</p>
+		</div><!-- containter  -->
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">

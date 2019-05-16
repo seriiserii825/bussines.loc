@@ -50,7 +50,7 @@ function custom_theme_options() {
 			),
 		),
 		'settings'        => array(
-			// tab
+			// tab Основные настройки
 			array(
 				'id'           => 'header_tab',
 				'label'        => 'Основные',
@@ -73,7 +73,7 @@ function custom_theme_options() {
 				'type'         => 'on-off',
 				'section'      => 'header',
 			),
-			//===============================tab
+			//===============================tab Контакты
 			array(
 				'id'           => 'header_contact_tab',
 				'label'        => 'Контакты',
@@ -93,6 +93,30 @@ function custom_theme_options() {
 				'id'           => 'contacts_open',
 				'label'        => 'Часы работы',
 				'desc'         => 'Добавьте время работы',
+				'std'          => '',
+				'type'         => 'text',
+				'section'      => 'header',
+			),
+			//===============================tab Обратная связь
+			array(
+				'id'           => 'header_feedback_tab',
+				'label'        => 'Обратная связь',
+				'desc'         => '',
+				'type'         => 'tab',
+				'section'      => 'header',
+			),
+			array(
+				'id'           => 'feedback_title',
+				'label'        => 'Заголовок обратной связи',
+				'desc'         => '',
+				'std'          => '',
+				'type'         => 'text',
+				'section'      => 'header',
+			),
+			array(
+				'id'           => 'feedback_shortcode',
+				'label'        => 'Шорткод contact form 7',
+				'desc'         => 'Добавьте шорткод из плагина contact-form-7',
 				'std'          => '',
 				'type'         => 'text',
 				'section'      => 'header',
