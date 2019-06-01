@@ -22,14 +22,14 @@
 			?>
 			<div class="entry-meta">
 				<?php
-				bussines_posted_on();
-				bussines_posted_by();
+//				bussines_posted_on();
+//				bussines_posted_by();
 				?>
 			</div><!-- .entry-meta -->
 		<?php endif; ?>
 	</header><!-- .entry-header -->
 
-	<?php bussines_post_thumbnail(); ?>
+<!--	--><?php //bussines_post_thumbnail(); ?>
 
 	<div class="entry-content">
 		<?php
@@ -54,6 +54,6 @@
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
-		<?php bussines_entry_footer(); ?>
+<!--		--><?php //bussines_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->
