@@ -1,36 +1,65 @@
-<?php
-/**
- * The template for displaying the footer
- *
- * Contains the closing of the #content div and all content after.
- *
- * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
- *
- * @package bussines
- */
-
-?>
-
-	</div><!-- #content -->
-
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'bussines' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'bussines' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'bussines' ), 'bussines', '<a href="http://underscores.me/">Underscores.me</a>' );
-				?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
-</div><!-- #page -->
+<footer>
+    <section class="well3">
+        <div class="container">
+            <ul class="row contact-list">
+                <li class="grid_4">
+                    <div class="box">
+                        <div class="box_aside">
+                            <div class="icon2 fa-map-marker"></div>
+                        </div>
+                        <div class="box_cnt__no-flow">
+                            <address>4578 Marmora Road,Glasgow<br/> D04 89GR</address>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="box_aside">
+                            <div class="icon2 fa-envelope"></div>
+                        </div>
+                        <div class="box_cnt__no-flow"><a href="mailto:#">info@demolink.org</a></div>
+                    </div>
+                </li>
+                <li class="grid_4">
+                    <div class="box">
+                        <div class="box_aside">
+                            <div class="icon2 fa-phone"></div>
+                        </div>
+                        <div class="box_cnt__no-flow"><a href="callto:#">800-2345-6789</a></div>
+                    </div>
+                    <div class="box">
+                        <div class="box_aside">
+                            <div class="icon2 fa-fax"></div>
+                        </div>
+                        <div class="box_cnt__no-flow"><a href="callto:#">800-2345-6790</a></div>
+                    </div>
+                </li>
+                <li class="grid_4">
+                    <div class="box">
+                        <div class="box_aside">
+                            <div class="icon2 fa-facebook"></div>
+                        </div>
+                        <div class="box_cnt__no-flow"><a href="#">Follow on facebook</a></div>
+                    </div>
+                    <div class="box">
+                        <div class="box_aside">
+                            <div class="icon2 fa-twitter"></div>
+                        </div>
+                        <div class="box_cnt__no-flow"><a href="#">Follow on Twitter</a></div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="copyright">Business Company © <span id="copyright-year"></span>.&nbsp;&nbsp;<a href="index-5.html">Privacy Policy</a>More Business Website Templates at <a rel="nofollow" href="http://www.templatemonster.com/category/business-web-templates/" target="_blank">TemplateMonster.com</a>
+            </div>
+        </div>
+    </section>
+</footer>
+</div>
 
 <?php wp_footer(); ?>
 
 </body>
 </html>
+

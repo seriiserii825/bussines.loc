@@ -307,8 +307,3 @@
 })(jQuery, window);
 
 
-$(window).load(function () {
-    $('.sf-menu').superfish();
-});
-
-
