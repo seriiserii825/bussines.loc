@@ -2,17 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="253c7966-6024-4dcc-be17-b076f7e67266" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/wp-content/themes/bussines.loc/assets/js/custom.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/bussines.loc/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/bussines.loc/assets/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/bussines.loc/assets/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/bussines.loc/assets/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/bussines.loc/assets/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/bussines.loc/assets/js/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/bussines.loc/assets/js/superfish.js" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/bussines.loc/assets/js/superfish.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wp-content/themes/bussines.loc/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/bussines.loc/footer.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wp-content/themes/bussines.loc/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/bussines.loc/functions.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wp-content/themes/bussines.loc/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/bussines.loc/header.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wp-content/themes/bussines.loc/inc/carbon-fields/carbon-fields.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/bussines.loc/inc/carbon-fields/carbon-fields.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/bussines.loc/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/bussines.loc/index.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,23 +16,23 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5438144">
+    <splitter split-orientation="horizontal" split-proportion="0.64025694">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/wp-content/themes/bussines.loc/header.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="814">
-                  <caret line="101" selection-start-line="101" selection-end-line="101" />
+                <state relative-caret-position="78">
+                  <caret line="89" column="70" selection-start-line="89" selection-start-column="70" selection-end-line="89" selection-end-column="70" />
                 </state>
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/wp-content/themes/bussines.loc/index.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="413">
-                  <caret line="152" column="36" selection-start-line="152" selection-start-column="36" selection-end-line="152" selection-end-column="36" />
+                <state>
+                  <caret line="156" column="15" selection-start-line="156" selection-start-column="15" selection-end-line="156" selection-end-column="15" />
                 </state>
               </provider>
             </entry>
@@ -45,12 +40,64 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/wp-content/themes/bussines.loc/functions.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="528">
-                  <caret line="89" column="97" selection-start-line="89" selection-start-column="97" selection-end-line="89" selection-end-column="97" />
+                <state relative-caret-position="-8">
+                  <caret line="10" column="39" selection-start-line="10" selection-start-column="39" selection-end-line="10" selection-end-column="39" />
                   <folding>
-                    <element signature="e#214#1218#0#PHP" />
                     <element signature="n#bussines_content_width#0;n#!!top" />
                     <element signature="n#bussines_widgets_init#0;n#!!top" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/wp-content/themes/bussines.loc/inc/post-type.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="-8">
+                  <caret line="29" column="45" selection-start-line="29" selection-start-column="45" selection-end-line="29" selection-end-column="45" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/wp-content/themes/bussines.loc/footer.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="352">
+                  <caret line="37" column="45" selection-start-line="37" selection-start-column="45" selection-end-line="37" selection-end-column="45" />
+                  <folding>
+                    <element signature="n#div#0;n#ul#0;n#div#0;n#section#0;n#footer#0;n#!!top" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/wp-content/themes/bussines.loc/assets/index.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="566">
+                  <caret line="333" column="17" selection-start-line="333" selection-start-column="17" selection-end-line="333" selection-end-column="17" />
+                  <folding>
+                    <element signature="n#div#0;n#li#0;n#ul#0;n#div#0;n#section#0;n#footer#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+                    <element signature="n#div#1;n#li#0;n#ul#0;n#div#0;n#section#0;n#footer#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+                    <element signature="n#div#0;n#li#1;n#ul#0;n#div#0;n#section#0;n#footer#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+                    <element signature="n#div#0;n#div#0;n#li#1;n#ul#0;n#div#0;n#section#0;n#footer#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+                    <element signature="n#div#1;n#li#1;n#ul#0;n#div#0;n#section#0;n#footer#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+                    <element signature="n#div#0;n#div#1;n#li#1;n#ul#0;n#div#0;n#section#0;n#footer#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+                    <element signature="n#div#0;n#li#2;n#ul#0;n#div#0;n#section#0;n#footer#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+                    <element signature="n#div#1;n#li#2;n#ul#0;n#div#0;n#section#0;n#footer#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+                    <element signature="n#section#1;n#footer#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/wp-content/themes/bussines.loc/inc/carbon-fields/carbon-fields.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="628">
+                  <caret line="40" column="34" selection-start-line="40" selection-start-column="34" selection-end-line="40" selection-end-column="34" />
+                  <folding>
+                    <element signature="e#7#35#0#PHP" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -60,20 +107,20 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/wp-content/themes/bussines.loc/assets/js/script.js">
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/wp-content/themes/bussines.loc/assets/css/style.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="220">
-                  <caret line="43" column="20" selection-start-line="43" selection-start-column="20" selection-end-line="43" selection-end-column="20" />
+                <state relative-caret-position="210">
+                  <caret line="1345" column="16" selection-start-line="1345" selection-start-column="16" selection-end-line="1345" selection-end-column="16" />
                 </state>
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/wp-content/themes/bussines.loc/assets/css/style.css">
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/wp-content/themes/bussines.loc/assets/js/script.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="496">
-                  <caret line="1345" column="16" selection-start-line="1345" selection-start-column="16" selection-end-line="1345" selection-end-column="16" />
+                <state relative-caret-position="694">
+                  <caret line="47" selection-start-line="47" selection-end-line="47" />
                 </state>
               </provider>
             </entry>
@@ -106,16 +153,17 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/wp-config.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/bussines.loc/footer.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/bussines.loc/index.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/bussines.loc/assets/index.html" />
-        <option value="$PROJECT_DIR$/wp-content/themes/bussines.loc/inc/carbon-fields/carbon-fields.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/bussines.loc/assets/js/custom.js" />
-        <option value="$PROJECT_DIR$/wp-content/themes/bussines.loc/header.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/bussines.loc/assets/css/style.css" />
-        <option value="$PROJECT_DIR$/wp-content/themes/bussines.loc/functions.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/bussines.loc/assets/js/superfish.js" />
         <option value="$PROJECT_DIR$/wp-content/themes/bussines.loc/assets/js/script.js" />
+        <option value="$PROJECT_DIR$/wp-content/themes/bussines.loc/header.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/bussines.loc/functions.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/bussines.loc/inc/post-type.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/bussines.loc/inc/carbon-fields/carbon-fields.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/bussines.loc/assets/index.html" />
+        <option value="$PROJECT_DIR$/wp-content/themes/bussines.loc/footer.php" />
       </list>
     </option>
   </component>
@@ -256,7 +304,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/wp-content/themes/bussines.loc/assets" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="editing.templates" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.PHP" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -288,12 +336,14 @@
       <workItem from="1559298611059" duration="2073000" />
       <workItem from="1559316659317" duration="10870000" />
       <workItem from="1559355450083" duration="89000" />
-      <workItem from="1559363531197" duration="2447000" />
+      <workItem from="1559363531197" duration="5170000" />
+      <workItem from="1559381712328" duration="308000" />
+      <workItem from="1559382037239" duration="5425000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15479000" />
+    <option name="totallyTimeSpent" value="23935000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -334,16 +384,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/bussines.loc/footer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#2377#2383#0#HTML" expanded="true" />
-            <element signature="e#2383#2389#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/bussines.loc/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="676">
@@ -351,34 +391,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/bussines.loc/assets/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="496">
-          <caret line="1345" column="16" selection-start-line="1345" selection-start-column="16" selection-end-line="1345" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/bussines.loc/assets/js/custom.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="22">
           <caret line="1" column="21" selection-start-line="1" selection-start-column="21" selection-end-line="1" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/bussines.loc/assets/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="804">
-          <caret line="71" column="9" selection-start-line="71" selection-start-column="9" selection-end-line="71" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/bussines.loc/inc/carbon-fields/carbon-fields.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="15" column="46" selection-start-line="15" selection-start-column="46" selection-end-line="15" selection-end-column="46" />
-          <folding>
-            <element signature="e#7#35#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -401,36 +417,94 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/wp-includes/post.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-832">
+          <caret line="1342" column="9" selection-start-line="1342" selection-start-column="9" selection-end-line="1342" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/bussines.loc/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="78">
+          <caret line="89" column="70" selection-start-line="89" selection-start-column="70" selection-end-line="89" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/bussines.loc/assets/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="1345" column="16" selection-start-line="1345" selection-start-column="16" selection-end-line="1345" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/bussines.loc/assets/js/script.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="43" column="20" selection-start-line="43" selection-start-column="20" selection-end-line="43" selection-end-column="20" />
+        <state relative-caret-position="694">
+          <caret line="47" selection-start-line="47" selection-end-line="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/bussines.loc/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="156" column="15" selection-start-line="156" selection-start-column="15" selection-end-line="156" selection-end-column="15" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/bussines.loc/functions.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="89" column="97" selection-start-line="89" selection-start-column="97" selection-end-line="89" selection-end-column="97" />
+        <state relative-caret-position="-8">
+          <caret line="10" column="39" selection-start-line="10" selection-start-column="39" selection-end-line="10" selection-end-column="39" />
           <folding>
-            <element signature="e#214#1218#0#PHP" />
             <element signature="n#bussines_content_width#0;n#!!top" />
             <element signature="n#bussines_widgets_init#0;n#!!top" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/bussines.loc/header.php">
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/bussines.loc/inc/post-type.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="814">
-          <caret line="101" selection-start-line="101" selection-end-line="101" />
+        <state relative-caret-position="-8">
+          <caret line="29" column="45" selection-start-line="29" selection-start-column="45" selection-end-line="29" selection-end-column="45" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/bussines.loc/index.php">
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/bussines.loc/inc/carbon-fields/carbon-fields.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="413">
-          <caret line="152" column="36" selection-start-line="152" selection-start-column="36" selection-end-line="152" selection-end-column="36" />
+        <state relative-caret-position="628">
+          <caret line="40" column="34" selection-start-line="40" selection-start-column="34" selection-end-line="40" selection-end-column="34" />
+          <folding>
+            <element signature="e#7#35#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/bussines.loc/assets/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="566">
+          <caret line="333" column="17" selection-start-line="333" selection-start-column="17" selection-end-line="333" selection-end-column="17" />
+          <folding>
+            <element signature="n#div#0;n#li#0;n#ul#0;n#div#0;n#section#0;n#footer#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#1;n#li#0;n#ul#0;n#div#0;n#section#0;n#footer#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#li#1;n#ul#0;n#div#0;n#section#0;n#footer#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#div#0;n#li#1;n#ul#0;n#div#0;n#section#0;n#footer#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#1;n#li#1;n#ul#0;n#div#0;n#section#0;n#footer#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#div#1;n#li#1;n#ul#0;n#div#0;n#section#0;n#footer#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#li#2;n#ul#0;n#div#0;n#section#0;n#footer#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#1;n#li#2;n#ul#0;n#div#0;n#section#0;n#footer#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#section#1;n#footer#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/bussines.loc/footer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="37" column="45" selection-start-line="37" selection-start-column="45" selection-end-line="37" selection-end-column="45" />
+          <folding>
+            <element signature="n#div#0;n#ul#0;n#div#0;n#section#0;n#footer#0;n#!!top" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -8,6 +8,9 @@
  */
 
 require_once __DIR__.'/inc/carbon-fields/carbon-fields.php';
+require_once __DIR__.'/inc/post-type.php';
+
+
 
 if ( ! function_exists( 'bussines_setup' ) ) :
 	function bussines_setup() {
@@ -21,7 +24,7 @@ if ( ! function_exists( 'bussines_setup' ) ) :
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
-			'menu-1' => esc_html__( 'Primary', 'bussines' ),
+			'primary' => esc_html__( 'Primary', 'bussines' ),
 		) );
 
 		add_theme_support( 'html5', array(
@@ -105,3 +108,12 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+add_filter( 'nav_menu_css_class', 'add_primary_menu_item_css_classes', 10, 4 );
+
+function add_primary_menu_item_css_classes( $classes) {
+	if(in_array('current-menu-item', $classes)){
+        $classes[] = 'active';
+	}
+
+	return $classes;
+}

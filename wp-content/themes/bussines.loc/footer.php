@@ -2,50 +2,46 @@
     <section class="well3">
         <div class="container">
             <ul class="row contact-list">
-                <li class="grid_4">
-                    <div class="box">
-                        <div class="box_aside">
-                            <div class="icon2 fa-map-marker"></div>
-                        </div>
-                        <div class="box_cnt__no-flow">
-                            <address>4578 Marmora Road,Glasgow<br/> D04 89GR</address>
-                        </div>
-                    </div>
-                    <div class="box">
-                        <div class="box_aside">
-                            <div class="icon2 fa-envelope"></div>
-                        </div>
-                        <div class="box_cnt__no-flow"><a href="mailto:#">info@demolink.org</a></div>
-                    </div>
-                </li>
-                <li class="grid_4">
-                    <div class="box">
-                        <div class="box_aside">
-                            <div class="icon2 fa-phone"></div>
-                        </div>
-                        <div class="box_cnt__no-flow"><a href="callto:#">800-2345-6789</a></div>
-                    </div>
-                    <div class="box">
-                        <div class="box_aside">
-                            <div class="icon2 fa-fax"></div>
-                        </div>
-                        <div class="box_cnt__no-flow"><a href="callto:#">800-2345-6790</a></div>
-                    </div>
-                </li>
-                <li class="grid_4">
-                    <div class="box">
-                        <div class="box_aside">
-                            <div class="icon2 fa-facebook"></div>
-                        </div>
-                        <div class="box_cnt__no-flow"><a href="#">Follow on facebook</a></div>
-                    </div>
-                    <div class="box">
-                        <div class="box_aside">
-                            <div class="icon2 fa-twitter"></div>
-                        </div>
-                        <div class="box_cnt__no-flow"><a href="#">Follow on Twitter</a></div>
-                    </div>
-                </li>
+                <?php $socials = new WP_Query([
+					'post_type' => 'socials',
+                    'posts_per_page' => 6,
+                    'order' => 'ASC'
+                ]); ?>
+                <?php if($socials->have_posts()): ?>
+					<?php $i = 1;  while($socials->have_posts()): ?>
+                        <?php $socials->the_post(); ?>
+                            <?php if($i % 2 != 0): ?>
+							<li class="grid_4">
+							<?php endif; ?>
+								<div class="box">
+									<div class="box_aside">
+										<div class="icon2 <?php echo carbon_get_the_post_meta('crb_social_icon') ?>"></div>
+									</div>
+									<div class="box_cnt__no-flow">
+										<?php
+											$title = get_the_title();
+											$social_type = carbon_get_the_post_meta('crb_social_type_icon');
+											$title_phone = str_replace([' ', '-', '(', ')'], '', $title);
+										?>
+
+										<?php if($social_type == 'address'): ?>
+										   <address><?php the_title(); ?></address>
+											<?php elseif ($social_type == 'phone'): ?>
+											<a href="callto:<?php echo $title_phone; ?>"><?php the_title(); ?></a>
+											<?php elseif ($social_type == 'email'): ?>
+											<a href="mailto:<?php the_title(); ?>"><?php the_title(); ?></a>
+											<?php else: ?>
+											<a href="<?php echo carbon_get_the_post_meta('crb_social_link'); ?>"><?php the_title(); ?></a>
+										<?php endif; ?>
+									</div>
+								</div>
+							<?php if($i % 4 == 0): ?>
+							</li>
+							<?php endif; ?>
+                    <?php $i++; endwhile; ?>
+                    <?php else: ?>
+                        <h1>Добавьте иконки для соцсетей из меню соцсети из админки</h1>
+                <?php endif; ?>
             </ul>
         </div>
     </section>
