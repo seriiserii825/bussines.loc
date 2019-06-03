@@ -10,6 +10,16 @@
 require_once __DIR__.'/inc/carbon-fields/carbon-fields.php';
 require_once __DIR__.'/inc/post-type.php';
 
+function debug($data){
+	echo '<pre>'.print_r($data, 1).'</pre>';
+}
+
+/* Сбрасываем правила для произвольного типа записей. */
+add_action( 'after_switch_theme', 'bt_flush_rewrite_rules' );
+
+function bt_flush_rewrite_rules() {
+	 flush_rewrite_rules();
+}
 
 
 if ( ! function_exists( 'bussines_setup' ) ) :

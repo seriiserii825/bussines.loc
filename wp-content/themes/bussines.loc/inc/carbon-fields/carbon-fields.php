@@ -46,6 +46,7 @@ function crb_attach_theme_options()
 
 	Container::make( 'post_meta', __( 'Page Options', 'crb' ) )
         ->where( 'post_type', '=', 'page' ) // only show our new fields on pages
+		->where( 'post_id', '=', '43' ) // only show our new fields on pages
 		->add_tab(__('Advanced options'), array(
             Field::make( 'complex', 'crb_advanced', 'Advanced options' )
                 ->set_layout( 'tabbed-horizontal' )
@@ -55,6 +56,18 @@ function crb_attach_theme_options()
                     Field::make( 'text', 'title', 'Title' ),
                     Field::make( 'textarea', 'text', 'Text' ),
                 ) ),
-        ) );
+			Field::make( 'text', 'advanced_count', 'Advanced count items' )
+			->set_help_text('Сколько элементов показать на странице?')
+			->set_width(20)
+        ) )
+		->add_tab(__('Social icons options'), array(
+		Field::make( 'complex', 'crb_social_icons', 'Advanced options' )
+			->set_layout( 'tabbed-horizontal' )
+			->add_fields( array(
+				Field::make( 'text', 'icon', 'Icon' ),
+				Field::make( 'text', 'title', 'Title' ),
+				Field::make( 'textarea', 'text', 'Text' ),
+			) ),
+	) );
 
 }

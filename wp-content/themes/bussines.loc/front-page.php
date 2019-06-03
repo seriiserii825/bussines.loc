@@ -34,7 +34,14 @@
 
     <?php
         $advanced = carbon_get_the_post_meta('crb_advanced');
-        $advanced = array_slice($advanced, 0, 4);
+        $advancedCount = carbon_get_the_post_meta('advanced_count');
+        if($advancedCount > count($advanced)){
+            $advancedCount = count($advanced) - 1;
+        }elseif($advancedCount === ''){
+            $advancedCount = 4;
+        }
+
+        $advanced = array_slice($advanced, 0, $advancedCount);
 	?>
 
     <?php if($advanced): ?>
@@ -52,6 +59,11 @@
 			</div>
 		</section>
     <?php endif; ?>
+
+	<?php // TODO Поменять соц иконки в футере на complex field carbon-fields ?>
+    <?php // TODO Добавить все страницы в проект и проверить ?>
+
+
 	<section class="well ins1">
 		<div class="container hr">
 			<ul class="row product-list">
@@ -100,6 +112,7 @@
 			</ul>
 		</div>
 	</section>
+
 	<section class="well1">
 		<div class="container">
 			<div class="row">
