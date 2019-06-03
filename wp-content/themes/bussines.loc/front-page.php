@@ -29,33 +29,29 @@
             <h1>Место для слайдера из панели меню из админке</h1>
         </div>
     <?php endif; ?>
+    <?php wp_reset_postdata(); ?>
 
 
-		<div class="container banner_wr">
-			<ul class="banner">
-				<li>
-					<div class="fa-globe"></div>
-					<h3>Global<br/>research</h3>
-					<p>Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p><a href="#"></a>
-				</li>
-				<li>
-					<div class="fa-lightbulb-o"></div>
-					<h3>Creative<br/>ideas</h3>
-					<p>Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p><a href="#"></a>
-				</li>
-				<li>
-					<div class="fa-cog"></div>
-					<h3>New<br/>services</h3>
-					<p>Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p><a href="#"></a>
-				</li>
-				<li>
-					<div class="fa-briefcase"></div>
-					<h3>Pro<br/>management</h3>
-					<p>Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p><a href="#"></a>
-				</li>
-			</ul>
-		</div>
-	</section>
+    <?php
+        $advanced = carbon_get_the_post_meta('crb_advanced');
+        $advanced = array_slice($advanced, 0, 4);
+	?>
+
+    <?php if($advanced): ?>
+		<section>
+			<div class="container banner_wr">
+				<ul class="banner">
+                    <?php foreach ($advanced as $item): ?>
+						<li>
+							<div class="<?php echo $item['icon']; ?>"></div>
+							<h3><?php echo $item['title']; ?></h3>
+							<p><?php echo $item['text']; ?>></p>
+						</li>
+					<?php endforeach; ?>
+				</ul>
+			</div>
+		</section>
+    <?php endif; ?>
 	<section class="well ins1">
 		<div class="container hr">
 			<ul class="row product-list">
