@@ -20,7 +20,7 @@
                                         <?php elseif ($soc_icon_sel === 'email'): ?>
 											<a href="mailto:<?php echo $soc_icon['link']; ?>"><?php echo $soc_icon['link']; ?></a>
                                         <?php elseif ($soc_icon_sel === 'phone'): ?>
-                                            <a href="callto:<?php echo str_replace(['-', '(', ')'], '', $soc_icon['phone']); ?>"><?php echo $soc_icon['link']; ?></a>
+                                            <a href="callto:<?php echo str_replace(['-', '(', ')'], '', $soc_icon['link']); ?>"><?php echo $soc_icon['link']; ?></a>
                                         <?php else:  ?>
                                             <a href="#"><?php echo $soc_icon['link']; ?></a>
                                         <?php endif; ?>

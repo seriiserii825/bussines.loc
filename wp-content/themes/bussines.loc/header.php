@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="<?php language_attributes(); ?>">
 <head>
-    <title>Home</title>
     <meta charset="utf-8">
     <meta name="format-detection" content="telephone=no">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">

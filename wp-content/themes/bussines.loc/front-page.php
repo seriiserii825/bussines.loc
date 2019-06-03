@@ -57,7 +57,6 @@
 		</section>
     <?php endif; ?>
 
-	<?php // TODO Поменять соц иконки в футере на complex field carbon-fields ?>
     <?php // TODO Добавить все страницы в проект и проверить ?>
 
 
