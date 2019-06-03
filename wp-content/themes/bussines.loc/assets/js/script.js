@@ -40,9 +40,32 @@ jQuery(document).ready(function($) {
         }
     };
 
+    let camera = function(){
+        var o = $('#camera');
+        if (o.length > 0) {
+
+            o.camera({
+                autoAdvance: true,
+                height: '30.859375%',
+                minHeight: '350px',
+                pagination: false,
+                thumbnails: false,
+                playPause: false,
+                hover: false,
+                loader: 'none',
+                navigation: true,
+                navigationHover: false,
+                mobileNavHover: false,
+                fx: 'simpleFade'
+            })
+        }
+    };
+
+
     tmstickup();
     toTop();
     equalHeights();
     superfish();
     wow();
+    camera();
 });

@@ -94,7 +94,7 @@ function bussines_scripts() {
 	wp_enqueue_script( 'business-jquery.ui.totop-js', get_template_directory_uri() . '/assets/js/jquery.ui.totop.js', array('jquery'), null, true );
 	wp_enqueue_script( 'business-jquery.equalheights-js', get_template_directory_uri() . '/assets/js/jquery.equalheights.js', array('jquery'), null, true );
 	wp_enqueue_script( 'business-superfish-js', get_template_directory_uri() . '/assets/js/superfish.js', array('jquery'), null, true );
-	wp_enqueue_script( 'business-script-js', get_template_directory_uri() . '/assets/js/script.js', array('jquery'), null, true );
+	wp_enqueue_script( 'business-camera-js', get_template_directory_uri() . '/assets/js/camera.js', array('jquery'), null, true );
 	wp_enqueue_script( 'business-jquery.magnific-popup.min-js', get_template_directory_uri() . '/assets/js/jquery.magnific-popup.min.js', array('jquery'), null, true );
 	wp_enqueue_script( 'business-custom-js', get_template_directory_uri() . '/assets/js/custom.js', array('jquery'), null, true );
 

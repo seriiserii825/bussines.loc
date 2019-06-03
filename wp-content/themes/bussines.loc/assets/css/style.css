@@ -97,10 +97,6 @@ strong {
 	font-family: "FontAwesome";
 }
 
-.page {
-	overflow: hidden;
-	min-height: 500px;
-}
 .lt-ie9 .page {
 	min-width: 1200px;
 }
