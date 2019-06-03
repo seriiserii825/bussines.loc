@@ -60,54 +60,82 @@
     <?php // TODO post type services with animation ?>
 
 
+    <?php $features = new WP_Query([
+		'post_type' => 'features',
+        'posts_per_page' => 4
+    ]); ?>
+
+    <?php if($features): ?>
 	<section class="well ins1">
 		<div class="container hr">
-			<ul class="row product-list">
-				<li class="grid_6">
-					<div class="box wow fadeInRight">
-						<div class="box_aside">
-							<div class="icon fa-comments"></div>
-						</div>
-						<div class="box_cnt__no-flow">
-							<h3><a href="#">Incididunt ut labore et dolore</a></h3>
-							<p>Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolor.</p>
-						</div>
-					</div>
-					<hr>
-					<div data-wow-delay="0.2s" class="box wow fadeInRight">
-						<div class="box_aside">
-							<div class="icon fa-calendar-o"></div>
-						</div>
-						<div class="box_cnt__no-flow">
-							<h3><a href="#">Incididunt ut labore et dolore</a></h3>
-							<p>Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolor.</p>
-						</div>
-					</div>
-				</li>
-				<li class="grid_6">
-					<div data-wow-delay="0.3s" class="box wow fadeInRight">
-						<div class="box_aside">
-							<div class="icon fa-group"></div>
-						</div>
-						<div class="box_cnt__no-flow">
-							<h3><a href="#">Incididunt ut labore et dolore</a></h3>
-							<p>Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolor.</p>
-						</div>
-					</div>
-					<hr>
-					<div data-wow-delay="0.4s" class="box wow fadeInRight">
-						<div class="box_aside">
-							<div class="icon fa-thumbs-up"></div>
-						</div>
-						<div class="box_cnt__no-flow">
-							<h3><a href="#">Incididunt ut labore et dolore</a></h3>
-							<p>Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolor.</p>
-						</div>
-					</div>
-				</li>
-			</ul>
+			<ul class="product-list">
+                <?php if($features->have_posts()): ?>
+                    <?php while($features->have_posts()): ?>
+                        <?php $features->the_post(); ?>
+                        <li>
+                            <div class="box wow fadeInRight">
+                                <div class="box_aside">
+                                    <div class="icon "></div>
+                                </div>
+                                <div class="box_cnt__no-flow">
+                                    <h3><a href="#"><?php the_title(); ?></a></h3>
+                                    <p><?php the_excerpt(); ?></p>
+                                </div>
+                            </div>
+                        </li>
+                    <?php endwhile; ?>
+                    <?php else: ?>
+                <h1 style="color: red; text-align: center;">Добавьте блок преимуществ из кастомныго типа записей</h1>
+                <?php endif; ?>
+
+<!--				<li>-->
+<!--					<div class="box wow fadeInRight">-->
+<!--						<div class="box_aside">-->
+<!--							<div class="icon fa-comments"></div>-->
+<!--						</div>-->
+<!--						<div class="box_cnt__no-flow">-->
+<!--							<h3><a href="#">Incididunt ut labore et dolore</a></h3>-->
+<!--							<p>Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolor.</p>-->
+<!--						</div>-->
+<!--					</div>-->
+<!--                </li>-->
+<!--                <li>-->
+<!--					<div data-wow-delay="0.2s" class="box wow fadeInRight">-->
+<!--						<div class="box_aside">-->
+<!--							<div class="icon fa-calendar-o"></div>-->
+<!--						</div>-->
+<!--						<div class="box_cnt__no-flow">-->
+<!--							<h3><a href="#">Incididunt ut labore et dolore</a></h3>-->
+<!--							<p>Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolor.</p>-->
+<!--						</div>-->
+<!--					</div>-->
+<!--				</li>-->
+<!--				<li>-->
+<!--					<div data-wow-delay="0.3s" class="box wow fadeInRight">-->
+<!--						<div class="box_aside">-->
+<!--							<div class="icon fa-group"></div>-->
+<!--						</div>-->
+<!--						<div class="box_cnt__no-flow">-->
+<!--							<h3><a href="#">Incididunt ut labore et dolore</a></h3>-->
+<!--							<p>Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolor.</p>-->
+<!--						</div>-->
+<!--					</div>-->
+<!--                </li>-->
+<!--                <li>-->
+<!--					<div data-wow-delay="0.4s" class="box wow fadeInRight">-->
+<!--						<div class="box_aside">-->
+<!--							<div class="icon fa-thumbs-up"></div>-->
+<!--						</div>-->
+<!--						<div class="box_cnt__no-flow">-->
+<!--							<h3><a href="#">Incididunt ut labore et dolore</a></h3>-->
+<!--							<p>Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolor.</p>-->
+<!--						</div>-->
+<!--					</div>-->
+<!--				</li>-->
+<!--			</ul>-->
 		</div>
 	</section>
+	<?php endif; ?>
 
 	<section class="well1">
 		<div class="container">

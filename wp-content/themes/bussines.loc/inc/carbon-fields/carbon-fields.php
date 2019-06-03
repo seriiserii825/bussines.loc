@@ -29,19 +29,10 @@ function crb_attach_theme_options()
 		));
 
 	Container::make('post_meta', __('Post meta'))
-		->where('post_type', '=', 'socials')
+		->where('post_type', '=', 'features')
 		->add_fields(array(
-			Field::make('text', 'crb_social_icon', 'Название иконки')
+			Field::make('text', 'crb_features_icon', 'Название иконки')
 				->set_help_text('Название иконки нужно взять с сайта https://fontawesome.com/icons?from=io'),
-			Field::make('radio', 'crb_social_type_icon', __('Тип иконки'))
-				->add_options(array(
-					'address' => __('Address'),
-					'phone' => __('Phone'),
-					'email' => __('Email'),
-					'link' => __('Link'),
-				)),
-			Field::make('text', 'crb_social_link', 'Ссылка на соц сети')
-				->set_help_text('Поле только для иконок у которых есть ссылки на соцсети'),
 		));
 
 	Container::make( 'post_meta', __( 'Page Options', 'crb' ) )

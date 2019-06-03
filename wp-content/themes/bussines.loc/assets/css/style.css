@@ -1362,3 +1362,20 @@ footer .copyright a:hover {
 	background: lightblue;
 	border-radius: 4px;
 }
+
+.product-list {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+	grid-gap: 30px;
+}
+
+.product-list li {
+	padding-bottom: 30px;
+	float: none;
+}
+
+.product-list li:first-child,
+.product-list li:nth-child(2) {
+	border-bottom: 1px solid #ccc;
+}
