@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="<?php language_attributes(); ?>">
+<html lang="<?php language_attributes(); ?>" class="desktop">
 <head>
     <meta charset="utf-8">
     <meta name="format-detection" content="telephone=no">

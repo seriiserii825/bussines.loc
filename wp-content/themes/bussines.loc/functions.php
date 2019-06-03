@@ -87,6 +87,7 @@ add_action( 'widgets_init', 'bussines_widgets_init' );
 function bussines_scripts() {
 	wp_enqueue_style( 'business-style', get_stylesheet_uri() );
 	wp_enqueue_style('business-grid-css', get_template_directory_uri().'/assets/css/grid.css');
+	wp_enqueue_style('business-animate-css', get_template_directory_uri().'/assets/css/animate.css');
 	wp_enqueue_style('business-magnific-popup-css', get_template_directory_uri().'/assets/css/magnific-popup.css');
 	wp_enqueue_style('business-style-css', get_template_directory_uri().'/assets/css/style.css');
 	wp_enqueue_style('business-colorScheme-4-css', get_template_directory_uri().'/assets/css/colorScheme-4.css');
@@ -105,6 +106,7 @@ function bussines_scripts() {
 	wp_enqueue_script( 'business-jquery.equalheights-js', get_template_directory_uri() . '/assets/js/jquery.equalheights.js', array('jquery'), null, true );
 	wp_enqueue_script( 'business-superfish-js', get_template_directory_uri() . '/assets/js/superfish.js', array('jquery'), null, true );
 	wp_enqueue_script( 'business-camera-js', get_template_directory_uri() . '/assets/js/camera.js', array('jquery'), null, true );
+	wp_enqueue_script( 'business-wow-js', get_template_directory_uri() . '/assets/js/wow.js', array('jquery'), null, true );
 	wp_enqueue_script( 'business-jquery.magnific-popup.min-js', get_template_directory_uri() . '/assets/js/jquery.magnific-popup.min.js', array('jquery'), null, true );
 	wp_enqueue_script( 'business-custom-js', get_template_directory_uri() . '/assets/js/custom.js', array('jquery'), null, true );
 

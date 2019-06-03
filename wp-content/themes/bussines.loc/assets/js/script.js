@@ -35,6 +35,7 @@ jQuery(document).ready(function($) {
 
     let wow = function(){
         var o = $('html');
+
         if (o.hasClass('desktop')) {
             new WOW().init();
         }
