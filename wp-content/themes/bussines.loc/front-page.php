@@ -57,7 +57,7 @@
 		</section>
     <?php endif; ?>
 
-    <?php // TODO Добавить все страницы в проект и проверить ?>
+    <?php // TODO post type services with animation ?>
 
 
 	<section class="well ins1">

@@ -1,160 +1,165 @@
 <?php get_header(); ?>
 
-<main>
-	<section class="well1 ins2 mobile-center">
-		<div class="container">
-			<h2>The best business services</h2>
-			<div class="row off2">
-				<div class="grid_4"><img src="images/page-3_img01.jpg" alt="">
-					<h3>Fusce euismod consequat ante</h3>
-					<p>Curabitur facilisis pellentesque pharetra. Donec justo urna, malesuada a viverra ac, pellentesque vitae nunc. Aenean ac leo eget nunc fringilla a non nulla! Nunc orci mi, venenatis quis ultrices vitae, congue non nibh.</p><a href="#" class="btn">Read more</a>
-				</div>
-				<div class="grid_4"><img src="images/page-3_img02.jpg" alt="">
-					<h3>Ut pharetra augue nec viverra</h3>
-					<p>Donec justo urna, malesuada a viverra ac, pellentesque vitae nunc. Aenean ac leo eget nunc fringilla a non nulla! Nunc orci mi, venenatis quis ultrices vitae, congue non nibh. Nulla bibendum, justo eget ultrices vestibulum.</p><a href="#" class="btn">Read more</a>
-				</div>
-				<div class="grid_4"><img src="images/page-3_img03.jpg" alt="">
-					<h3>Donec porta diam eu massa</h3>
-					<p>Aenean ac leo eget nunc fringilla a non nulla! Nunc orci mi, venenatis quis ultrices vitae, congue non nibh. Nulla bibendum, justo eget ultrices vestibulum erat tortor venenatis risus, sit amet cursus dui augue a arcu.</p><a href="#" class="btn">Read more</a>
-				</div>
-			</div>
-			<hr>
-			<div class="row">
-				<div class="grid_4"><img src="images/page-3_img04.jpg" alt="">
-					<h3>Proin dictum elementum velit</h3>
-					<p>Nunc orci mi, venenatis quis ultrices vitae, congue non nibh. Nulla bibendum, justo eget ultrices vestibulum erat tortor venenatis risus, sit amet cursus dui augue a arcu. Quisque mauris risus, gravida a molestie eu.</p><a href="#" class="btn">Read more</a>
-				</div>
-				<div class="grid_4"><img src="images/page-3_img05.jpg" alt="">
-					<h3>Vestibulum iaculis lacinia est</h3>
-					<p>Quisque mauris risus, gravida a molestie eu, dictum ac augue. Integer sodales tempor lectus; sit amet dictum metus pharetra nec. Fusce bibendum dapibus pretium. Nunc eu sem vitae lacus laoreet elementum. Nulla facilisi.</p><a href="#" class="btn">Read more</a>
-				</div>
-				<div class="grid_4"><img src="images/page-3_img06.jpg" alt="">
-					<h3>Consectetuer adipiscing elit</h3>
-					<p>Integer sodales tempor lectus; sit amet dictum metus pharetra nec. Fusce bibendum dapibus pretium. Nunc eu sem vitae lacus laoreet elementum. Nulla facilisi. Phasellus ullamcorper elementum est, id pretium turpis.</p><a href="#" class="btn">Read more</a>
-				</div>
-			</div>
-		</div>
-	</section>
-	<section class="well1 ins4 bg-image">
-		<div class="container">
-			<div class="row">
-				<div class="grid_7 preffix_5">
-					<h2>How we can help?</h2>
-					<p>Curabitur pellentesque, turpis sit amet iaculis condimentum, urna mi aliquet turpis, itae pharetra mauris eros non arcu. Aenean felis augue, dignissim in tempus eget, cursus sit amet sem? Cras vehicula vehicula nunc id fringilla?</p>
-					<div class="row off4">
-						<div class="grid_3">
-							<ul class="marked-list wow fadeInRight">
-								<li><a href="#">Praesent vestibulum molestie</a></li>
-								<li><a href="#">Aenean nonummy hendrerit</a></li>
-								<li><a href="#">Vivamus eget nibh</a></li>
-								<li><a href="#">Etiam cursus leo vel metus</a></li>
-							</ul>
-						</div>
-						<div class="grid_3">
-							<ul data-wow-delay="0.2s" class="marked-list wow fadeInRight">
-								<li><a href="#">Donec in velit vel ipsum auctor</a></li>
-								<li><a href="#">Vestibulum iaculis lacinia est</a></li>
-								<li><a href="#">Proin dictum elementum velit</a></li>
-								<li><a href="#">Fusce euismod consequat ante</a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<section class="well1">
-		<div class="container">
-			<h2 class="mobile-center">Price list</h2>
-			<div class="row">
-				<div class="grid_4">
-					<table class="wow fadeInUp">
-						<tr>
-							<td>Suspendisse sollicitudin velit sed leo</td>
-							<td>$ 32.00</td>
-						</tr>
-						<tr>
-							<td>Ut pharetra augue nec augue</td>
-							<td>$ 27.00</td>
-						</tr>
-						<tr>
-							<td>Nam elit agna endrerit sit amet</td>
-							<td>$ 16.00</td>
-						</tr>
-						<tr>
-							<td>Tincidunt ac viverra sed nulla</td>
-							<td>$ 42.00</td>
-						</tr>
-						<tr>
-							<td>Donec porta diam eu massa</td>
-							<td>$ 50.00</td>
-						</tr>
-						<tr>
-							<td>Quisque diam lorem interdum vitae</td>
-							<td>$ 90.00</td>
-						</tr>
-					</table>
-				</div>
-				<div class="grid_4">
-					<table data-wow-delay="0.2s" class="wow fadeInUp">
-						<tr>
-							<td>Tincidunt ac viverra sed nulla</td>
-							<td>$ 42.00</td>
-						</tr>
-						<tr>
-							<td>Donec porta diam eu massa</td>
-							<td>$ 50.00</td>
-						</tr>
-						<tr>
-							<td>Quisque diam lorem interdum vitae</td>
-							<td>$ 32.00</td>
-						</tr>
-						<tr>
-							<td>Scelerisque vitae pede</td>
-							<td>$ 27.00</td>
-						</tr>
-						<tr>
-							<td>Donec eget tellus non erat</td>
-							<td>$ 16.00</td>
-						</tr>
-						<tr>
-							<td>Lacinia fermentum</td>
-							<td>$ 90.00</td>
-						</tr>
-					</table>
-				</div>
-				<div class="grid_4">
-					<table data-wow-delay="0.4s" class="wow fadeInUp">
-						<tr>
-							<td>Donec in velit vel ipsum pulvinar</td>
-							<td>$ 27.00</td>
-						</tr>
-						<tr>
-							<td>Vestibulum iaculis lacinia est</td>
-							<td>$ 42.00</td>
-						</tr>
-						<tr>
-							<td>Proin dictum elementum velit</td>
-							<td>$ 50.00</td>
-						</tr>
-						<tr>
-							<td>Fusce euismod consequat ante</td>
-							<td>$ 32.00</td>
-						</tr>
-						<tr>
-							<td>Lorem ipsum dolor sit amet</td>
-							<td>$ 16.00</td>
-						</tr>
-						<tr>
-							<td>Consectetuer adipiscing elit</td>
-							<td>FREE</td>
-						</tr>
-					</table>
-				</div>
-			</div>
-		</div>
-	</section>
+<main class="mobile-center">
+    <section>
+        <div class="container hr well1 ins2">
+            <div class="row">
+                <div class="grid_6">
+                    <div class="video">
+                        <iframe src="//player.vimeo.com/video/37582125?wmode=transparent" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="grid_6">
+                    <h2>Quick facts</h2>
+                    <div class="row">
+                        <div class="grid_3">
+                            <dl class="info">
+                                <dt>Name</dt>
+                                <dd>Business Company</dd>
+                                <dt>Birth Date</dt>
+                                <dd>June 23, 1987</dd>
+                                <dt>Place of birth</dt>
+                                <dd>Los Angeles, California</dd>
+                            </dl>
+                        </div>
+                        <div class="grid_3">
+                            <dl class="info">
+                                <dt>History</dt>
+                                <dd>
+                                    <ul>
+                                        <li>Lorem ipsum dolor sit 1997-1999 adipis</li>
+                                        <li>Pellentesque sed dolor  1995-1999</li>
+                                        <li>Aliquam congue nisl 2001-2005</li>
+                                        <li>Mauris accumsa vel diam 2006-2008</li>
+                                        <li>Sed in lacus ut 2008-2010 enim adipiscing </li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="well1 ins3">
+        <div class="container">
+            <h2>Who we are</h2>
+            <div class="row off1">
+                <div class="grid_6">
+                    <h3>About us</h3>
+                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatu. Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt. Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna. Suspendisse commodo tempor sagittis!<br/><br/>In justo est, sollicitudin eu scelerisque pretium, placerat eget elit. Praesent faucibus rutrum odio at rhoncus. Pellentesque vitae tortor id neque fermentum pretium.</p>
+                    <hr>
+                    <h3>What we offer</h3>
+                    <div class="row">
+                        <div data-wow-delay="0.2s" class="grid_3 wow fadeInLeft"><img src="images/page-2_img01.jpg" alt=""></div>
+                        <div class="grid_3 wow fadeInLeft"><img src="images/page-2_img02.jpg" alt=""></div>
+                    </div>
+                    <p>Nam justo elit, dictum id tempus a, ultricies tempus lacus. Nunc purus nibh; eleifend eget facilisis ac, sagittis non tortor. Vivamus eu enim a orci accumsan tincidunt ut ut elit. Vestibulum nisi orci, rutrum ac auctor non, viverra et magna?</p>
+                </div>
+                <div class="grid_6">
+                    <h3>Our staff</h3>
+                    <div class="row">
+                        <div class="grid_2 wow fadeInRight"><img src="images/page-2_img03.jpg" alt=""><img src="images/page-2_img06.jpg" alt=""></div>
+                        <div data-wow-delay="0.2s" class="grid_2 wow fadeInRight"><img src="images/page-2_img04.jpg" alt=""><img src="images/page-2_img07.jpg" alt=""></div>
+                        <div data-wow-delay="0.4s" class="grid_2 wow fadeInRight"><img src="images/page-2_img05.jpg" alt=""><img src="images/page-2_img08.jpg" alt=""></div>
+                    </div>
+                    <p>Curabitur facilisis pellentesque pharetra. Donec justo urna, malesuada a viverra ac, pellentesque vitae nunc. Aenean ac leo eget nunc fringilla a non nulla! Nunc orci mi, venenatis quis ultrices vitae, congue non nibh. Nulla bibendum, justo eget ultrices.</p>
+                    <hr>
+                    <h3>Our advantages</h3>
+                    <p>Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna. Suspendisse commodo tempor sagittis! In justo est, sollicitudin eu scelerisque pretium, placerat eget elit. Praesent faucibus rutrum odio at rhoncus. Pellentesque vitae tortor id neque fermentum pretium.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="well1 ins3 bg-primary">
+        <div class="container">
+            <h2>Our awards</h2>
+            <ul class="product-list row off1">
+                <li class="grid_6">
+                    <div class="box">
+                        <div class="box_aside">
+                            <div class="icon fa-asterisk"></div>
+                        </div>
+                        <div class="box_cnt__no-flow">
+                            <h3>Vestibulum elementum tempus eleifend</h3>
+                            <p>Sed do eiusmod tempor incididunt ut labore et dolore magna. Suspendisse commodo tempor sagittis! In justo est sollicitudin.</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="box">
+                        <div class="box_aside">
+                            <div class="icon fa-asterisk"></div>
+                        </div>
+                        <div class="box_cnt__no-flow">
+                            <h3>Congue dui ut porta aenean laoreet</h3>
+                            <p>Pellentesque vitae tortor id neque fermentum pretium. Maecenas ac lacus ut neque rhoncus laoreet sed id tellus.</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="box">
+                        <div class="box_aside">
+                            <div class="icon fa-asterisk"></div>
+                        </div>
+                        <div class="box_cnt__no-flow">
+                            <h3>Aenean laoreet viverra turpis a com</h3>
+                            <p>Maecenas ac lacus ut neque rhoncus laoreet sed id tellus. Donec justo tellus, tincidunt vitae pellentesque nec, pharetra a orci. Praesent</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="grid_6">
+                    <div class="box">
+                        <div class="box_aside">
+                            <div class="icon fa-asterisk"></div>
+                        </div>
+                        <div class="box_cnt__no-flow">
+                            <h3>Tempus eleifend cum sociis natoque</h3>
+                            <p>Labore et dolore magna. Suspendisse commodo tempor sagittis! In justo est sollicitudin eu scelerisque pretium, placerat eget elit.</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="box">
+                        <div class="box_aside">
+                            <div class="icon fa-trophy"></div>
+                        </div>
+                        <div class="box_cnt__no-flow">
+                            <h3>Sociis natoque penatibus vestibulum</h3>
+                            <p>Suspendisse commodo tempor sagittis! In justo est sollicitudin eu scelerisque pretium, placerat eget elit. Praesent faucibus rutrum.</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="box">
+                        <div class="box_aside">
+                            <div class="icon fa-trophy"></div>
+                        </div>
+                        <div class="box_cnt__no-flow">
+                            <h3>Penatibus vestibulum congue dui ut</h3>
+                            <p>In justo est sollicitudin eu scelerisque pretium, placerat eget elit. Praesent faucibus rutrum odio at rhoncus.</p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section class="well1">
+        <div class="container">
+            <div class="row">
+                <div class="grid_4">
+                    <h2>Duties</h2>
+                    <p>Aenean ac leo eget nunc fringilla a non nulla! Nunc orci mi, venenatis quis ultrices vitae, congue non nibh. Nulla bibendum, justo eget ultrices vestibulum, erat tortor venenatis risus, sit amet cursus dui augue a arcu.</p>
+                </div>
+                <div class="grid_4">
+                    <h2>Skills</h2>
+                    <p>Nunc orci mi, venenatis quis ultrices vitae, congue non nibh. Nulla bibendum, justo eget ultrices vestibulum, erat tortor venenatis risus, sit amet cursus dui augue a arcu. Quisque mauris risus, gravida a molestie eu, dictum.</p>
+                </div>
+                <div class="grid_4">
+                    <h2>Opportunities</h2>
+                    <p>Quisque mauris risus, gravida a molestie eu, dictum ac augue. Integer sodales tempor lectus; sit amet dictum metus pharetra nec. Fusce bibendum dapibus pretium. Nunc eu sem vitae lacus laoreet elementum.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 </main>
 
 
 <?php get_footer(); ?>
+
