@@ -1,37 +1,36 @@
 <?php get_header(); ?>
 <main>
-	<section class="camera_container">
-		<div id="camera" class="camera_wrap">
-			<div data-src="<?php echo get_template_directory_uri(); ?>/assets/images/page-1_slide01.jpg">
-				<div class="camera_caption fadeIn">
-					<div class="container">
-						<div class="row">
-							<div class="preffix_6 grid_6">Helping with any of your business needs!</div>
-						</div>
-					</div>
-				</div>
+    <?php $slider = new WP_Query([
+		'post_type' => 'main-slider',
+        'posts_per_page' => -1
+    ]); ?>
+
+    <?php if($slider->have_posts()): ?>
+
+		<section class="camera_container">
+			<div id="camera" class="camera_wrap">
+			<?php while($slider->have_posts()): ?>
+				<?php $slider->the_post(); ?>
+                <div data-src="<?php echo kama_thumb_src(['width' => 1920]); ?>">
+                    <div class="camera_caption fadeIn">
+                        <div class="container">
+                            <div class="row">
+                                <div class="preffix_6 grid_6"><?php the_title(); ?></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+			<?php endwhile; ?>
 			</div>
-			<div data-src="<?php echo get_template_directory_uri(); ?>/assets/images/page-1_slide02.jpg">
-				<div class="camera_caption fadeIn">
-					<div class="container">
-						<div class="row">
-							<div class="preffix_6 grid_6">The best strategies to attract new business</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div data-src="<?php echo get_template_directory_uri(); ?>/assets/images/page-1_slide03.jpg">
-				<div class="camera_caption fadeIn">
-					<div class="container">
-						<div class="row">
-							<div class="preffix_6 grid_6">A wide range of global business information</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<section>
+		</section>
+        <?php else: ?>
+        <div>
+            <h1>Место для слайдера из панели меню из админке</h1>
+        </div>
+    <?php endif; ?>
+
+
 		<div class="container banner_wr">
 			<ul class="banner">
 				<li>
