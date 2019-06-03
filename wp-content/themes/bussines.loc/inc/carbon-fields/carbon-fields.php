@@ -28,6 +28,9 @@ function crb_attach_theme_options()
 				))
 		));
 
+	/**
+	 * features
+	 */
 	Container::make('post_meta', __('Post meta'))
 		->where('post_type', '=', 'features')
 		->add_fields(array(
@@ -35,6 +38,9 @@ function crb_attach_theme_options()
 				->set_help_text('Название иконки нужно взять с сайта https://fontawesome.com/icons?from=io'),
 		));
 
+	/**
+	 * page home
+	 */
 	Container::make( 'post_meta', __( 'Page Options', 'crb' ) )
         ->where( 'post_type', '=', 'page' ) // only show our new fields on pages
 		->where( 'post_id', '=', '43' ) // only show our new fields on pages

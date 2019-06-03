@@ -75,10 +75,10 @@
                         <li>
                             <div class="box wow fadeInRight">
                                 <div class="box_aside">
-                                    <div class="icon "></div>
+                                    <div class="icon <?php echo carbon_get_the_post_meta('crb_features_icon'); ?>"></div>
                                 </div>
                                 <div class="box_cnt__no-flow">
-                                    <h3><a href="#"><?php the_title(); ?></a></h3>
+                                    <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
                                     <p><?php the_excerpt(); ?></p>
                                 </div>
                             </div>
