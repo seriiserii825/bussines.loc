@@ -47,6 +47,16 @@ function crb_attach_theme_options()
 	Container::make( 'post_meta', __( 'Page Options', 'crb' ) )
         ->where( 'post_type', '=', 'page' ) // only show our new fields on pages
 		->where( 'post_id', '=', '43' ) // only show our new fields on pages
+			//slider
+		->add_tab(__('Slider'), array(
+			Field::make( 'complex', 'crb_slider', 'Slider options' )
+				->set_layout( 'tabbed-horizontal' )
+				->add_fields( array(
+					Field::make( 'text', 'title', 'Title' ),
+					Field::make( 'image', 'image', 'Image' ),
+				) ),
+		) )
+		//advanced
 		->add_tab(__('Advanced options'), array(
             Field::make( 'complex', 'crb_advanced', 'Advanced options' )
                 ->set_layout( 'tabbed-horizontal' )
@@ -60,6 +70,7 @@ function crb_attach_theme_options()
 			->set_help_text('Сколько элементов показать на странице?')
 			->set_width(20)
         ) )
+		//social icons
 		->add_tab(__('Social icons options'), array(
 		Field::make( 'complex', 'crb_social_icons', 'Advanced options' )
 			->set_layout( 'tabbed-horizontal' )

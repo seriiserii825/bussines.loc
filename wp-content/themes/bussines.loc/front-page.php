@@ -1,35 +1,32 @@
 <?php get_header(); ?>
 <main>
-    <?php $slider = new WP_Query([
-		'post_type' => 'main-slider',
-        'posts_per_page' => -1
-    ]); ?>
 
-    <?php if($slider->have_posts()): ?>
+    <?php
+		$slider = carbon_get_the_post_meta('crb_slider');
+	?>
 
-		<section class="camera_container">
+    <?php if($slider): ?>
+        <section class="camera_container">
 			<div id="camera" class="camera_wrap">
-			<?php while($slider->have_posts()): ?>
-				<?php $slider->the_post(); ?>
-                <div data-src="<?php echo kama_thumb_src(['width' => 1920]); ?>">
-                    <div class="camera_caption fadeIn">
-                        <div class="container">
-                            <div class="row">
-                                <div class="preffix_6 grid_6"><?php the_title(); ?></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-			<?php endwhile; ?>
-			</div>
-		</section>
-        <?php else: ?>
+			<?php foreach ($slider as $slide): ?>
+				<?php $slider_img_url = wp_get_attachment_image_src((int)$slide['image'], 'full'); ?>
+					<div data-src="<?php echo $slider_img_url[0]; ?>">
+						<div class="camera_caption fadeIn">
+							<div class="container">
+								<div class="row">
+									<div class="preffix_6 grid_6"><?php echo $slide['title']; ?></div>
+								</div>
+							</div>
+						</div>
+					</div>
+			<?php endforeach; ?>
+            </div>
+        </section>
+    <?php else: ?>
         <div>
-            <h1>Место для слайдера из панели меню из админке</h1>
+            <h1 style="color: red; margin-bottom: 80px; text-align: center;">Место для слайдера со странице Home в настройках</h1>
         </div>
-    <?php endif; ?>
-    <?php wp_reset_postdata(); ?>
+	<?php endif; ?>
 
 
     <?php
