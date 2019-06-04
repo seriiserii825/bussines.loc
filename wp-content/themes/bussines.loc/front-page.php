@@ -57,9 +57,6 @@
 		</section>
     <?php endif; ?>
 
-    <?php // TODO post type services with animation ?>
-
-
     <?php $features = new WP_Query([
 		'post_type' => 'features',
         'posts_per_page' => 4
@@ -91,6 +88,9 @@
 		</div>
 	</section>
 	<?php endif; ?>
+
+    <?php // TODO about section ?>
+
 
 	<section class="well1">
 		<div class="container">
