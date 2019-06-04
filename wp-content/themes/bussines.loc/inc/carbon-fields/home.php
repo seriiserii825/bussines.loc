@@ -37,6 +37,20 @@ Container::make( 'post_meta', __( 'Page Options', 'crb' ) )
 		Field::make('image', 'crb_block_about_image', 'Block About image'),
 		Field::make('textarea', 'crb_block_about_text', 'Block About text'),
 	))
+	//Block Services
+	->add_tab(__('Block Services'), array(
+		Field::make('textarea', 'crb_block_services_text', 'Block Services text'),
+		Field::make('text', 'crb_block_services_count', 'Block Services count')
+		->set_width(20),
+	))
+	//Block Help Center
+	->add_tab(__('Block Help Center'), array(
+		Field::make('text', 'crb_block_help_center_title', 'Block Help Center title'),
+		Field::make('text', 'crb_block_help_center_work_days', 'Block Help Center Work days'),
+		Field::make('text', 'crb_block_help_center_saturday', 'Block Help Center saturday'),
+		Field::make('text', 'crb_block_help_center_sunday', 'Block Help Center sunday'),
+		Field::make('text', 'crb_block_help_center_phone', 'Block Help Center phone'),
+	))
 	//social icons in footer
 	->add_tab(__('Social icons in footer'), array(
 		Field::make( 'complex', 'crb_social_icons', 'Advanced options' )

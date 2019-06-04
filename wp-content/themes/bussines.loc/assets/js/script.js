@@ -37,7 +37,11 @@ jQuery(document).ready(function($) {
         var o = $('html');
 
         if (o.hasClass('desktop')) {
-            new WOW().init();
+            new WOW({
+                offset:       800,          // default
+                mobile:       false,       // default
+            });
+            wow.init();
         }
     };
 

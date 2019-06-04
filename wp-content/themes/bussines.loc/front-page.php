@@ -1,4 +1,6 @@
 <?php get_header(); ?>
+<?php $page = get_page_by_title('Home' ); ?>
+<?php $page_id = $page->ID; ?>
 <main>
 
     <?php
@@ -88,20 +90,20 @@
 		</div>
 	</section>
 	<?php endif; ?>
+    <?php wp_reset_postdata(); ?>
 
 	<section class="well1">
 		<div class="container">
 			<div class="row">
 				<div class="grid_4 wow fadeInLeft">
-                    <?php $page = get_page_by_title('Home' ); ?>
 
-                    <?php if(carbon_get_post_meta($page->ID, 'crb_block_about_title')): ?>
-					<h2><?php echo carbon_get_post_meta($page->ID, 'crb_block_about_title'); ?></h2>
+                    <?php if(carbon_get_post_meta($page_id, 'crb_block_about_title')): ?>
+					<h2><?php echo carbon_get_post_meta($page_id, 'crb_block_about_title'); ?></h2>
                     <?php else: ?>
                     <h1 class="text-center">Title for block about</h1>
                     <?php endif; ?>
 
-                    <?php $img_id = carbon_get_post_meta($page->ID, 'crb_block_about_image'); ?>
+                    <?php $img_id = carbon_get_post_meta($page_id, 'crb_block_about_image'); ?>
                     <?php $img_url = wp_get_attachment_image_src($img_id, 'full'); ?>
 
 					<?php if($img_id): ?>
@@ -110,48 +112,70 @@
                         <h1 class="text-center">Image for block About</h1>
                     <?php endif; ?>
 
-					<?php if(carbon_get_post_meta($page->ID, 'crb_block_about_text')): ?>
-					<p><?php echo carbon_get_post_meta($page->ID, 'crb_block_about_text') ?></p><a href="#" class="btn">Read more</a>
+					<?php if(carbon_get_post_meta($page_id, 'crb_block_about_text')): ?>
+					<p><?php echo carbon_get_post_meta($page_id, 'crb_block_about_text') ?></p><a href="#" class="btn">Read more</a>
                     <?php else: ?>
                         <h1 class="text-center">Text for block About</h1>
                     <?php endif; ?>
 				</div>
-				<div class="grid_4">
+				<div class="grid_4 wow fadeInUp">
 					<h2>Services</h2>
-					<p>Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-					<ul class="marked-list">
-						<li><a href="#">Lorem ipsum dolor sit amet </a></li>
-						<li><a href="#">Conse ctetur adipisicing</a></li>
-						<li><a href="#">Elit sed do eiusmod tempor</a></li>
-						<li><a href="#">Incididunt ut labore</a></li>
-						<li><a href="#">Et dolore magna aliqua</a></li>
-						<li><a href="#">Ut enim ad minim veniam</a></li>
-						<li><a href="#">Quis nostrud exercitation</a></li>
-						<li><a href="#">Incididunt ut labore</a></li>
-						<li><a href="#">Et dolore magna aliqua</a></li>
-					</ul><a href="#" class="btn">Read more</a>
+					<?php if(carbon_get_post_meta($page_id, 'crb_block_services_text')): ?>
+                        <p><?php echo carbon_get_post_meta($page_id, 'crb_block_services_text') ?></p>
+					<?php else: ?>
+                        <h1 class="text-center">Text for block About</h1>
+					<?php endif; ?>
+
+					<?php $services_count = carbon_get_post_meta($page_id, 'crb_block_services_count') ? carbon_get_post_meta($page_id, 'crb_block_services_count') : -1 ?>
+
+                    <?php $services = new WP_Query([
+						'category_name' => 'services',
+                        'posts_per_page' => $services_count
+                    ]); ?>
+
+                    <?php if($services->have_posts()): ?>
+                    <ul class="marked-list">
+                        <?php while($services->have_posts()): ?>
+                            <?php $services->the_post(); ?>
+                            <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
+
+                        <?php endwhile; ?>
+                    </ul>
+					<a href="#" class="btn">Read more</a>
+                        <?php else: ?>
+                    <?php endif; ?>
+                    <?php wp_reset_postdata(); ?>
 				</div>
+
 				<div class="grid_4">
 					<div class="info-box">
-						<h2 class="fa-comment">Help center</h2>
+						<?php $help_center_title = carbon_get_post_meta($page_id, 'crb_block_help_center_title') ? carbon_get_post_meta($page_id, 'crb_block_help_center_title') : 'Help Center' ?>
+						<?php $help_center_work_days = carbon_get_post_meta($page_id, 'crb_block_help_center_work_days') ? carbon_get_post_meta($page_id, 'crb_block_help_center_work_days') : '9am-6pm' ?>
+						<?php $help_center_saturday = carbon_get_post_meta($page_id, 'crb_block_help_center_saturday') ? carbon_get_post_meta($page_id, 'crb_block_help_center_saturday') : '9am-2pm' ?>
+						<?php $help_center_sunday = carbon_get_post_meta($page_id, 'crb_block_help_center_sunday') ? carbon_get_post_meta($page_id, 'crb_block_help_center_sunday') : '9am-12pm' ?>
+						<?php $help_center_phone = carbon_get_post_meta($page_id, 'crb_block_help_center_phone') ? carbon_get_post_meta($page_id, 'crb_block_help_center_phone') : '800-700-300' ?>
+
+						<h2 class="fa-comment"><?php echo $help_center_title; ?></h2>
 						<hr>
 						<h3>Ask professionals:</h3>
+
 						<dl>
 							<dt>Monday - Friday:</dt>
-							<dd>8am-7pm</dd>
+							<dd><?php echo $help_center_work_days; ?></dd>
 						</dl>
+
 						<dl>
 							<dt>Saturday:</dt>
-							<dd>8am-5pm</dd>
+							<dd><?php echo $help_center_saturday; ?></dd>
 						</dl>
 						<dl>
 							<dt>Sunday:</dt>
-							<dd>1pm-5pm</dd>
+							<dd><?php echo $help_center_sunday; ?></dd>
 						</dl>
 						<hr>
 						<h3>24/7 Online Support:</h3>
 						<dl>
-							<dt>800-2345-6789</dt>
+							<dt><?php echo $help_center_phone; ?></dt>
 						</dl>
 					</div>
 					<div class="owl-carousel">
