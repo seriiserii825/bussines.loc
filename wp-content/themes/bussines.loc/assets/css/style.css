@@ -1379,3 +1379,33 @@ footer .copyright a:hover {
 	text-align: center;
 	color: red;
 }
+
+.reviews-slider {
+	padding: 30px 30px 60px 30px;
+}
+
+.reviews-slider .slick-dots {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	bottom: 25px;
+	display: flex;
+	justify-content: center;
+	cursor: pointer;
+}
+
+.reviews-slider .slick-dots li {
+	margin-right: 10px;
+	width: 10px;
+	height: 10px;
+	background: #ccc;
+	border-radius: 50%;
+}
+
+.reviews-slider .slick-dots li.slick-active {
+	background: #6bc7ed;
+}
+
+.reviews-slider .slick-dots li button {
+	font-size: 0;
+}

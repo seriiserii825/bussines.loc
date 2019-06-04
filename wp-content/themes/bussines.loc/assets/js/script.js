@@ -37,16 +37,20 @@ jQuery(document).ready(function($) {
         var o = $('html');
 
         if (o.hasClass('desktop')) {
-            new WOW({
-                offset:       800,          // default
-                mobile:       false,       // default
+            wow = new WOW(
+              {
+                  offset:       200,          // default
+                  mobile:       true,       // default
+                  live:         true        // default
             });
+
             wow.init();
         }
     };
 
     let camera = function(){
         var o = $('#camera');
+
         if (o.length > 0) {
 
             o.camera({
@@ -66,6 +70,13 @@ jQuery(document).ready(function($) {
         }
     };
 
+    let reviewsSlider = function(){
+        $('#js-reviews').slick({
+            arrows: false,
+            dots: true
+        });
+    };
+
 
     tmstickup();
     toTop();
@@ -73,4 +84,5 @@ jQuery(document).ready(function($) {
     superfish();
     wow();
     camera();
+    reviewsSlider();
 });

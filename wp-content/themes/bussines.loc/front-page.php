@@ -178,7 +178,8 @@
 							<dt><?php echo $help_center_phone; ?></dt>
 						</dl>
 					</div>
-					<div class="owl-carousel">
+
+					<div class="owl-carousel reviews-slider" id="js-reviews">
 						<div class="item">
 							<blockquote class="box">
 								<div class="box_aside"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/page-1_img02.jpg" alt=""></div>
