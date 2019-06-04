@@ -50,21 +50,4 @@ Container::make( 'post_meta', __( 'Page Options', 'crb' ) )
 		Field::make('text', 'crb_block_help_center_saturday', 'Block Help Center saturday'),
 		Field::make('text', 'crb_block_help_center_sunday', 'Block Help Center sunday'),
 		Field::make('text', 'crb_block_help_center_phone', 'Block Help Center phone'),
-	))
-	//social icons in footer
-	->add_tab(__('Social icons in footer'), array(
-		Field::make( 'complex', 'crb_social_icons', 'Advanced options' )
-			->set_layout( 'tabbed-horizontal' )
-			->add_fields( array(
-				Field::make( 'text', 'icon', 'Icon' ),
-				Field::make( 'text', 'link', 'Text' ),
-				Field::make( 'select', 'crb_social_icons_select', __( 'Choose type of text' ) )
-					->set_help_text('Выеберите тип текста')
-					->set_options( array(
-						'address' => 'address',
-						'email' => 'email',
-						'phone' => 'phone',
-						'link' => 'link'
-					) )
-			) ),
-	) );
+	));

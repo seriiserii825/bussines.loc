@@ -148,7 +148,7 @@
 				</div>
 
 				<div class="grid_4">
-					<div class="info-box">
+					<div class="info-box wow fadeInRight ">
 						<?php $help_center_title = carbon_get_post_meta($page_id, 'crb_block_help_center_title') ? carbon_get_post_meta($page_id, 'crb_block_help_center_title') : 'Help Center' ?>
 						<?php $help_center_work_days = carbon_get_post_meta($page_id, 'crb_block_help_center_work_days') ? carbon_get_post_meta($page_id, 'crb_block_help_center_work_days') : '9am-6pm' ?>
 						<?php $help_center_saturday = carbon_get_post_meta($page_id, 'crb_block_help_center_saturday') ? carbon_get_post_meta($page_id, 'crb_block_help_center_saturday') : '9am-2pm' ?>
@@ -179,52 +179,35 @@
 						</dl>
 					</div>
 
-					<div class="owl-carousel reviews-slider" id="js-reviews">
-						<div class="item">
-							<blockquote class="box">
-								<div class="box_aside"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/page-1_img02.jpg" alt=""></div>
-								<div class="box_cnt__no-flow">
-									<p>
-										<q>Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</q>
-									</p>
-									<cite><a href="#">Incididunt ut labor</a></cite>
-								</div>
-							</blockquote>
-						</div>
-						<div class="item">
-							<blockquote class="box">
-								<div class="box_aside"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/page-1_img03.jpg" alt=""></div>
-								<div class="box_cnt__no-flow">
-									<p>
-										<q>Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</q>
-									</p>
-									<cite><a href="#">Incididunt ut labor</a></cite>
-								</div>
-							</blockquote>
-						</div>
-						<div class="item">
-							<blockquote class="box">
-								<div class="box_aside"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/page-1_img04.jpg" alt=""></div>
-								<div class="box_cnt__no-flow">
-									<p>
-										<q>Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</q>
-									</p>
-									<cite><a href="#">Incididunt ut labor</a></cite>
-								</div>
-							</blockquote>
-						</div>
-						<div class="item">
-							<blockquote class="box">
-								<div class="box_aside"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/page-1_img05.jpg" alt=""></div>
-								<div class="box_cnt__no-flow">
-									<p>
-										<q>Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</q>
-									</p>
-									<cite><a href="#">Incididunt ut labor</a></cite>
-								</div>
-							</blockquote>
-						</div>
-					</div>
+                    <?php $reviews = new WP_Query([
+						'post_type' => 'reviews',
+                        'posts_per_page' => -1
+                    ]); ?>
+
+                    <?php if($reviews->have_posts()): ?>
+                    <div class="owl-carousel reviews-slider wow fadeInUp " id="js-reviews">
+                        <?php while($reviews->have_posts()): ?>
+                            <?php $reviews->the_post(); ?>
+                            <div class="item">
+                                <blockquote class="box">
+                                    <div class="box_aside"><?php the_post_thumbnail('full'); ?></div>
+                                    <div class="box_cnt__no-flow">
+                                        <p>
+                                            <q>
+                                                <?php the_excerpt(); ?>
+                                            </q>
+                                        </p>
+                                        <cite><a href="#"><?php the_title(); ?></a></cite>
+                                    </div>
+                                </blockquote>
+                            </div>
+
+                        <?php endwhile; ?>
+                    </div>
+                        <?php else: ?>
+                        <h1 class="text-center">Добавьте посты для салйдера из админки</h1>
+                    <?php endif; ?>
+                    <?php wp_reset_postdata(); ?>
 				</div>
 			</div>
 		</div>

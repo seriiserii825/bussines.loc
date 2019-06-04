@@ -30,4 +30,33 @@ function bussines__post_types(){
 		'menu_position'      => null,
 		'supports'           => array('title', 'excerpt')
 	) );
+
+	register_post_type('reviews', array(
+		'labels'             => array(
+			'name'               => 'Отзывы', // Основное название типа записи
+			'singular_name'      => 'Отзыв', // отдельное название записи типа Book
+			'add_new'            => 'Добавить новый отзыв',
+			'add_new_item'       => 'Добавить новый отзыв',
+			'edit_item'          => 'Редактировать отзыв',
+			'new_item'           => 'Новая иконка',
+			'view_item'          => 'Посмотреть отзыв',
+			'search_items'       => 'Найти отзыв',
+			'not_found'          => 'Отзывов не найдено',
+			'not_found_in_trash' => 'В корзине отзыв не найдено',
+			'parent_item_colon'  => '',
+			'menu_name'          => 'Отзывы'
+
+		),
+		'public'             => true,
+		'publicly_queryable' => true,
+		'show_ui'            => true,
+		'show_in_menu'       => true,
+		'query_var'          => true,
+		'rewrite'            => true,
+		'capability_type'    => 'post',
+		'has_archive'        => true,
+		'hierarchical'       => false,
+		'menu_position'      => null,
+		'supports'           => array('title', 'excerpt', 'thumbnail')
+	) );
 }

@@ -1,5 +1,5 @@
 <footer>
-    <?php $socials_icons = carbon_get_the_post_meta('crb_social_icons'); ?>
+    <?php $socials_icons = carbon_get_theme_option('crb_social_icons'); ?>
 
     <?php if($socials_icons): ?>
 		<section class="well3">
@@ -33,6 +33,8 @@
 				</ul>
 			</div>
 		</section>
+    <?php else: ?>
+    <h1 class="text-center">Добавьте иконки из секции "Настройки темы" из адмники из секции "Footer Icons"</h1>
     <?php endif; ?>
     <section>
         <div class="container">
