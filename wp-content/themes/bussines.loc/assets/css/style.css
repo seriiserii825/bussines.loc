@@ -1427,3 +1427,15 @@ footer .copyright a:hover {
 .awards .box_aside {
 	margin-right: 20px;
 }
+
+/* services */
+.services-wrap h2 {
+	margin-bottom: 40px;
+}
+
+.services {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+	grid-gap: 30px;
+}
