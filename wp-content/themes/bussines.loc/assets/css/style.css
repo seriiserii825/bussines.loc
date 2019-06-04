@@ -1375,4 +1375,7 @@ footer .copyright a:hover {
 	padding-bottom: 30px;
 	border-bottom: 1px solid #ccc;
 }
-
+.text-center {
+	text-align: center;
+	color: red;
+}

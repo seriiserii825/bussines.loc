@@ -89,15 +89,32 @@
 	</section>
 	<?php endif; ?>
 
-    <?php // TODO about section ?>
-
-
 	<section class="well1">
 		<div class="container">
 			<div class="row">
-				<div class="grid_4">
-					<h2>About</h2><img src="<?php echo get_template_directory_uri(); ?>/assets/images/page-1_img01.jpg" alt="">
-					<p>Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatu. Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt. Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p><a href="#" class="btn">Read more</a>
+				<div class="grid_4 wow fadeInLeft">
+                    <?php $page = get_page_by_title('Home' ); ?>
+
+                    <?php if(carbon_get_post_meta($page->ID, 'crb_block_about_title')): ?>
+					<h2><?php echo carbon_get_post_meta($page->ID, 'crb_block_about_title'); ?></h2>
+                    <?php else: ?>
+                    <h1 class="text-center">Title for block about</h1>
+                    <?php endif; ?>
+
+                    <?php $img_id = carbon_get_post_meta($page->ID, 'crb_block_about_image'); ?>
+                    <?php $img_url = wp_get_attachment_image_src($img_id, 'full'); ?>
+
+					<?php if($img_id): ?>
+                        <img src="<?php echo $img_url[0]; ?>" alt="">
+                    <?php else: ?>
+                        <h1 class="text-center">Image for block About</h1>
+                    <?php endif; ?>
+
+					<?php if(carbon_get_post_meta($page->ID, 'crb_block_about_text')): ?>
+					<p><?php echo carbon_get_post_meta($page->ID, 'crb_block_about_text') ?></p><a href="#" class="btn">Read more</a>
+                    <?php else: ?>
+                        <h1 class="text-center">Text for block About</h1>
+                    <?php endif; ?>
 				</div>
 				<div class="grid_4">
 					<h2>Services</h2>
