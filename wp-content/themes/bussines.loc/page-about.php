@@ -1,163 +1,100 @@
 <?php get_header(); ?>
+<?php $page = get_page_by_title('About' ); ?>
+<?php $page_id = $page->ID; ?>
+
 
 <main class="mobile-center">
-    <section>
-        <div class="container hr well1 ins2">
-            <div class="row">
-                <div class="grid_6">
-                    <div class="video">
-                        <iframe src="//player.vimeo.com/video/37582125?wmode=transparent" allowfullscreen></iframe>
-                    </div>
-                </div>
-                <div class="grid_6">
-                    <h2>Quick facts</h2>
-                    <div class="row">
-                        <div class="grid_3">
-                            <dl class="info">
-                                <dt>Name</dt>
-                                <dd>Business Company</dd>
-                                <dt>Birth Date</dt>
-                                <dd>June 23, 1987</dd>
-                                <dt>Place of birth</dt>
-                                <dd>Los Angeles, California</dd>
-                            </dl>
-                        </div>
-                        <div class="grid_3">
-                            <dl class="info">
-                                <dt>History</dt>
-                                <dd>
-                                    <ul>
-                                        <li>Lorem ipsum dolor sit 1997-1999 adipis</li>
-                                        <li>Pellentesque sed dolor  1995-1999</li>
-                                        <li>Aliquam congue nisl 2001-2005</li>
-                                        <li>Mauris accumsa vel diam 2006-2008</li>
-                                        <li>Sed in lacus ut 2008-2010 enim adipiscing </li>
-                                    </ul>
-                                </dd>
-                            </dl>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
     <section class="well1 ins3">
         <div class="container">
-            <h2>Who we are</h2>
+            <h2><?php the_title(); ?></h2>
             <div class="row off1">
                 <div class="grid_6">
-                    <h3>About us</h3>
-                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatu. Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt. Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna. Suspendisse commodo tempor sagittis!<br/><br/>In justo est, sollicitudin eu scelerisque pretium, placerat eget elit. Praesent faucibus rutrum odio at rhoncus. Pellentesque vitae tortor id neque fermentum pretium.</p>
+                    <?php if(have_posts()): ?>
+                        <?php while(have_posts()): ?>
+                            <?php the_post(); ?>
+                            <?php the_content(); ?>
+                        <?php endwhile; ?>
+                        <?php else: ?>
+                    <?php endif; ?>
+	                <?php $offer_title = carbon_get_post_meta($page_id, 'crb_block_offer_title'); ?>
+	                <?php $offer_text = carbon_get_post_meta($page_id, 'crb_block_offer_text'); ?>
+	                <?php $offer_gallery = carbon_get_post_meta($page_id, 'crb_media_offer_gallery'); ?>
+
                     <hr>
-                    <h3>What we offer</h3>
+
+                    <h3><?php echo $offer_title; ?></h3>
                     <div class="row">
-                        <div data-wow-delay="0.2s" class="grid_3 wow fadeInLeft"><img src="images/page-2_img01.jpg" alt=""></div>
-                        <div class="grid_3 wow fadeInLeft"><img src="images/page-2_img02.jpg" alt=""></div>
+                        <?php $i = 1; foreach ($offer_gallery as $item): ?>
+<!--                        <div data-wow-delay="0.2s" class="grid_3 wow fadeInLeft"><img src="--><?php //echo get_template_directory_uri(); ?><!--/assets/images/page-2_img01.jpg" alt=""></div>-->
+                        <div <?php if($i == 1) echo 'data-wow-delay="0.2s"'; ?> class="grid_3 wow fadeInLeft">
+                            <img src="<?php echo wp_get_attachment_image_src(intval($item), 'full')[0]; ?>" alt="">
+                        </div>
+                        <?php $i++; endforeach; ?>
                     </div>
-                    <p>Nam justo elit, dictum id tempus a, ultricies tempus lacus. Nunc purus nibh; eleifend eget facilisis ac, sagittis non tortor. Vivamus eu enim a orci accumsan tincidunt ut ut elit. Vestibulum nisi orci, rutrum ac auctor non, viverra et magna?</p>
+                    <p><?php echo $offer_text; ?></p>
                 </div>
                 <div class="grid_6">
-                    <h3>Our staff</h3>
+                    <?php $stuff_title = carbon_get_post_meta($page_id, 'crb_block_stuff_title'); ?>
+	                <?php $stuff_text = carbon_get_post_meta($page_id, 'crb_block_stuff_text'); ?>
+                    <?php $stuff_gallery = carbon_get_post_meta($page_id, 'crb_media_gallery'); ?>
+
+                    <h3><?php echo $stuff_title; ?></h3>
+
                     <div class="row">
-                        <div class="grid_2 wow fadeInRight"><img src="images/page-2_img03.jpg" alt=""><img src="images/page-2_img06.jpg" alt=""></div>
-                        <div data-wow-delay="0.2s" class="grid_2 wow fadeInRight"><img src="images/page-2_img04.jpg" alt=""><img src="images/page-2_img07.jpg" alt=""></div>
-                        <div data-wow-delay="0.4s" class="grid_2 wow fadeInRight"><img src="images/page-2_img05.jpg" alt=""><img src="images/page-2_img08.jpg" alt=""></div>
+                        <?php $i = 1; foreach ($stuff_gallery as $item): ?>
+                            <?php if($i % 2 != 0): ?>
+                            <div data-wow-delay="0.<?php echo $i+3; ?>" class="grid_2 wow fadeInRight">
+                            <?php endif; ?>
+                                <img src="<?php echo wp_get_attachment_image_src(intval($item), 'full')[0]; ?>" alt="">
+                            <?php if($i % 2 == 0): ?>
+                            </div>
+                            <?php endif; ?>
+
+                        <?php $i++; endforeach; ?>
                     </div>
-                    <p>Curabitur facilisis pellentesque pharetra. Donec justo urna, malesuada a viverra ac, pellentesque vitae nunc. Aenean ac leo eget nunc fringilla a non nulla! Nunc orci mi, venenatis quis ultrices vitae, congue non nibh. Nulla bibendum, justo eget ultrices.</p>
+                    <p><?php echo $stuff_text; ?></p>
                     <hr>
-                    <h3>Our advantages</h3>
-                    <p>Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna. Suspendisse commodo tempor sagittis! In justo est, sollicitudin eu scelerisque pretium, placerat eget elit. Praesent faucibus rutrum odio at rhoncus. Pellentesque vitae tortor id neque fermentum pretium.</p>
+                    <?php $advantages_title = carbon_get_post_meta($page_id, 'crb_block_advantages_title'); ?>
+	                <?php $advantages_text = carbon_get_post_meta($page_id, 'crb_block_advantages_text'); ?>
+
+                    <h3><?php echo $advantages_title; ?></h3>
+                    <p><?php echo $advantages_text; ?></p>
                 </div>
             </div>
         </div>
     </section>
-    <section class="well1 ins3 bg-primary">
+    <?php $awards = new WP_Query([
+		'post_type' => 'awards',
+        'posts_per_page' => 6
+    ]); ?>
+
+    <?php if($awards->have_posts()): ?>
+    <section class="well1 ins3 bg-primary awards">
         <div class="container">
-            <h2>Our awards</h2>
-            <ul class="product-list row off1">
-                <li class="grid_6">
-                    <div class="box">
-                        <div class="box_aside">
-                            <div class="icon fa-asterisk"></div>
-                        </div>
-                        <div class="box_cnt__no-flow">
-                            <h3>Vestibulum elementum tempus eleifend</h3>
-                            <p>Sed do eiusmod tempor incididunt ut labore et dolore magna. Suspendisse commodo tempor sagittis! In justo est sollicitudin.</p>
-                        </div>
-                    </div>
-                    <hr>
-                    <div class="box">
-                        <div class="box_aside">
-                            <div class="icon fa-asterisk"></div>
-                        </div>
-                        <div class="box_cnt__no-flow">
-                            <h3>Congue dui ut porta aenean laoreet</h3>
-                            <p>Pellentesque vitae tortor id neque fermentum pretium. Maecenas ac lacus ut neque rhoncus laoreet sed id tellus.</p>
-                        </div>
-                    </div>
-                    <hr>
-                    <div class="box">
-                        <div class="box_aside">
-                            <div class="icon fa-asterisk"></div>
-                        </div>
-                        <div class="box_cnt__no-flow">
-                            <h3>Aenean laoreet viverra turpis a com</h3>
-                            <p>Maecenas ac lacus ut neque rhoncus laoreet sed id tellus. Donec justo tellus, tincidunt vitae pellentesque nec, pharetra a orci. Praesent</p>
-                        </div>
-                    </div>
-                </li>
-                <li class="grid_6">
-                    <div class="box">
-                        <div class="box_aside">
-                            <div class="icon fa-asterisk"></div>
-                        </div>
-                        <div class="box_cnt__no-flow">
-                            <h3>Tempus eleifend cum sociis natoque</h3>
-                            <p>Labore et dolore magna. Suspendisse commodo tempor sagittis! In justo est sollicitudin eu scelerisque pretium, placerat eget elit.</p>
-                        </div>
-                    </div>
-                    <hr>
-                    <div class="box">
-                        <div class="box_aside">
-                            <div class="icon fa-trophy"></div>
-                        </div>
-                        <div class="box_cnt__no-flow">
-                            <h3>Sociis natoque penatibus vestibulum</h3>
-                            <p>Suspendisse commodo tempor sagittis! In justo est sollicitudin eu scelerisque pretium, placerat eget elit. Praesent faucibus rutrum.</p>
-                        </div>
-                    </div>
-                    <hr>
-                    <div class="box">
-                        <div class="box_aside">
-                            <div class="icon fa-trophy"></div>
-                        </div>
-                        <div class="box_cnt__no-flow">
-                            <h3>Penatibus vestibulum congue dui ut</h3>
-                            <p>In justo est sollicitudin eu scelerisque pretium, placerat eget elit. Praesent faucibus rutrum odio at rhoncus.</p>
-                        </div>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </section>
-    <section class="well1">
-        <div class="container">
-            <div class="row">
-                <div class="grid_4">
-                    <h2>Duties</h2>
-                    <p>Aenean ac leo eget nunc fringilla a non nulla! Nunc orci mi, venenatis quis ultrices vitae, congue non nibh. Nulla bibendum, justo eget ultrices vestibulum, erat tortor venenatis risus, sit amet cursus dui augue a arcu.</p>
+            <h2>Наши награды</h2>
+            <div class="product-list">
+        <?php $i = 1; while($awards->have_posts()): ?>
+            <?php $animation = ($i % 2 != 0) ? 'fadeInLeft' : 'fadeInRight'; ?>
+
+            <?php $awards->the_post(); ?>
+            <div class="box wow <?php echo $animation; ?>">
+                <div class="box_aside" >
+                    <div class="icon <?php echo carbon_get_the_post_meta('crb_block_awards_icon'); ?>"></div>
                 </div>
-                <div class="grid_4">
-                    <h2>Skills</h2>
-                    <p>Nunc orci mi, venenatis quis ultrices vitae, congue non nibh. Nulla bibendum, justo eget ultrices vestibulum, erat tortor venenatis risus, sit amet cursus dui augue a arcu. Quisque mauris risus, gravida a molestie eu, dictum.</p>
+                <div class="box_cnt__no-flow">
+                    <h3><?php the_title(); ?></h3>
+                    <p><?php the_excerpt(); ?></p>
                 </div>
-                <div class="grid_4">
-                    <h2>Opportunities</h2>
-                    <p>Quisque mauris risus, gravida a molestie eu, dictum ac augue. Integer sodales tempor lectus; sit amet dictum metus pharetra nec. Fusce bibendum dapibus pretium. Nunc eu sem vitae lacus laoreet elementum.</p>
-                </div>
+            </div>
+
+        <?php $i++; endwhile; ?>
             </div>
         </div>
     </section>
+        <?php else: ?>
+    <h1 class="text-center">Добавьте награды из админки</h1>
+    <?php endif; ?>
+
 </main>
 
 

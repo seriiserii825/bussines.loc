@@ -9,7 +9,7 @@
                         <?php if($i % 2 != 0): ?>
 							<li class="grid_4">
 							<?php endif; ?>
-								<div class="box">
+								<div class="box wow fadeInUp">
 									<div class="box_aside">
 										<div class="icon2 <?php echo $soc_icon['icon'] ?>"></div>
 									</div>

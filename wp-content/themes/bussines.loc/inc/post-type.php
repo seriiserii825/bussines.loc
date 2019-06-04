@@ -59,4 +59,33 @@ function bussines__post_types(){
 		'menu_position'      => null,
 		'supports'           => array('title', 'excerpt', 'thumbnail')
 	) );
+
+	register_post_type('awards', array(
+		'labels'             => array(
+			'name'               => 'Награды', // Основное название типа записи
+			'singular_name'      => 'Наград', // отдельное название записи типа Book
+			'add_new'            => 'Добавить новую награду',
+			'add_new_item'       => 'Добавить новую награду',
+			'edit_item'          => 'Редактировать награду',
+			'new_item'           => 'Новая награда',
+			'view_item'          => 'Посмотреть награду',
+			'search_items'       => 'Найти награду',
+			'not_found'          => 'Наград не найдено',
+			'not_found_in_trash' => 'В корзине наград не найдено',
+			'parent_item_colon'  => '',
+			'menu_name'          => 'Награды'
+
+		),
+		'public'             => true,
+		'publicly_queryable' => true,
+		'show_ui'            => true,
+		'show_in_menu'       => true,
+		'query_var'          => true,
+		'rewrite'            => true,
+		'capability_type'    => 'post',
+		'has_archive'        => true,
+		'hierarchical'       => false,
+		'menu_position'      => null,
+		'supports'           => array('title', 'excerpt')
+	) );
 }

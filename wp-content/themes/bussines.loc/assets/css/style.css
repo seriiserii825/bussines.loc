@@ -1409,3 +1409,21 @@ footer .copyright a:hover {
 .reviews-slider .slick-dots li button {
 	font-size: 0;
 }
+
+.awards .box {
+	padding-bottom: 30px;
+	border-bottom: 1px solid #fff;
+}
+
+.awards .box:last-child,
+.awards .box:nth-child(5) {
+	border-bottom: none;
+}
+
+.awards h2 {
+	margin-bottom: 30px;
+}
+
+.awards .box_aside {
+	margin-right: 20px;
+}
