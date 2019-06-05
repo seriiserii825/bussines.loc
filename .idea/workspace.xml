@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="253c7966-6024-4dcc-be17-b076f7e67266" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wp-content/themes/bussines.loc/archive-auto.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/bussines.loc/archive-auto.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,8 +18,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/wp-content/themes/bussines.loc/archive-auto.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="249">
-                  <caret line="72" selection-start-line="72" selection-end-line="72" />
+                <state relative-caret-position="293">
+                  <caret line="101" column="30" selection-start-line="101" selection-start-column="30" selection-end-line="101" selection-end-column="30" />
                   <folding>
                     <element signature="e#6#36#0#PHP" expanded="true" />
                   </folding>
@@ -51,7 +52,7 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/wp-content/themes/bussines.loc/assets/js/custom.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="381">
+                <state relative-caret-position="352">
                   <caret line="48" column="13" selection-start-line="48" selection-start-column="13" selection-end-line="48" selection-end-column="13" />
                 </state>
               </provider>
@@ -351,12 +352,12 @@
       <workItem from="1559637455235" duration="17637000" />
       <workItem from="1559672163511" duration="4876000" />
       <workItem from="1559715416419" duration="2402000" />
-      <workItem from="1559721003857" duration="9981000" />
+      <workItem from="1559721003857" duration="10499000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="86026000" />
+    <option name="totallyTimeSpent" value="86544000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -705,15 +706,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/bussines.loc/assets/js/custom.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="381">
+        <state relative-caret-position="352">
           <caret line="48" column="13" selection-start-line="48" selection-start-column="13" selection-end-line="48" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/bussines.loc/archive-auto.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="72" selection-start-line="72" selection-end-line="72" />
+        <state relative-caret-position="293">
+          <caret line="101" column="30" selection-start-line="101" selection-start-column="30" selection-end-line="101" selection-end-column="30" />
           <folding>
             <element signature="e#6#36#0#PHP" expanded="true" />
           </folding>
