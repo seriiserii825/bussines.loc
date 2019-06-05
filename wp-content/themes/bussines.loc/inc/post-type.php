@@ -89,20 +89,20 @@ function bussines__post_types(){
 		'supports'           => array('title', 'excerpt')
 	) );
 
-	register_post_type('services', array(
+	register_post_type('auto', array(
 		'labels'             => array(
-			'name'               => 'Услуги', // Основное название типа записи
-			'singular_name'      => 'Услуг', // отдельное название записи типа Book
-			'add_new'            => 'Добавить новую услугу',
-			'add_new_item'       => 'Добавить новую услугу',
-			'edit_item'          => 'Редактировать услугу',
-			'new_item'           => 'Новая услуга',
-			'view_item'          => 'Посмотреть услугу',
-			'search_items'       => 'Найти услугу',
-			'not_found'          => 'Услуг не найдено',
-			'not_found_in_trash' => 'В корзине услуг не найдено',
+			'name'               => 'Автомобили', // Основное название типа записи
+			'singular_name'      => 'Автомобилей', // отдельное название записи типа Book
+			'add_new'            => 'Добавить новый автомобиль',
+			'add_new_item'       => 'Добавить новый автомобиль',
+			'edit_item'          => 'Редактировать автомобиль',
+			'new_item'           => 'Новый автомобиль',
+			'view_item'          => 'Посмотреть автомобиль',
+			'search_items'       => 'Найти автомобиль',
+			'not_found'          => 'Автомобилей не найдено',
+			'not_found_in_trash' => 'В корзине автомобилей не найдено',
 			'parent_item_colon'  => '',
-			'menu_name'          => 'Услуги'
+			'menu_name'          => 'Автомобили'
 
 		),
 		'public'             => true,
@@ -115,29 +115,28 @@ function bussines__post_types(){
 		'has_archive'        => true,
 		'hierarchical'       => false,
 		'menu_position'      => null,
-		'supports'           => array('title', 'excerpt', 'thumbnail')
+		'supports'           => array('title', 'editor', 'thumbnail')
 	) );
 }
 
 // хук для регистрации
 add_action( 'init', 'create_taxonomy' );
 function create_taxonomy(){
-	// список параметров: http://wp-kama.ru/function/get_taxonomy_labels
-	register_taxonomy('service_cat', array('services'), array(
+	register_taxonomy('auto_cat', array('auto'), array(
 		'label'                 => '', // определяется параметром $labels->name
 		'labels'                => array(
-			'name'              => 'Категории услуг',
-			'singular_name'     => 'Категория услуг',
-			'search_items'      => 'Search Категории услуг',
-			'all_items'         => 'All Категории услуг',
-			'view_item '        => 'View Категория услуг',
-			'parent_item'       => 'Parent Категория услуг',
-			'parent_item_colon' => 'Parent Категория услуг:',
-			'edit_item'         => 'Edit Категория услуг',
-			'update_item'       => 'Update Категория услуг',
-			'add_new_item'      => 'Add New Категория услуг',
-			'new_item_name'     => 'New Категория услуг Name',
-			'menu_name'         => 'Категория услуг',
+			'name'              => 'Категории автомобилей',
+			'singular_name'     => 'Категория автомобилей',
+			'search_items'      => 'Search Категории автомобилей',
+			'all_items'         => 'All Категории автомобилей',
+			'view_item '        => 'View Категория автомобилей',
+			'parent_item'       => 'Parent Категория автомобилей',
+			'parent_item_colon' => 'Parent Категория автомобилей:',
+			'edit_item'         => 'Edit Категория автомобилей',
+			'update_item'       => 'Update Категория автомобилей',
+			'add_new_item'      => 'Add New Категория автомобилей',
+			'new_item_name'     => 'New Категория автомобилей Name',
+			'menu_name'         => 'Категория автомобилей',
 		),
 		'description'           => '', // описание таксономии
 		'public'                => true,

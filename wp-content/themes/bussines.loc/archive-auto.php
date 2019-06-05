@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Services
+ * Template Name: Auto
  */
 
 get_header();
@@ -8,28 +8,28 @@ get_header();
 
 
 <main>
-    <?php $services = new WP_Query([
-		'post_type' => 'services',
-        'posts_per_page' => 6
+    <?php $auto = new WP_Query([
+		'post_type' => 'auto',
+        'posts_per_page' => -1
     ]); ?>
 
 
-	<?php if($services->have_posts()): ?>
-		<section class="well1 ins2 mobile-center services-wrap">
+	<?php if($auto->have_posts()): ?>
+		<section class="well1 ins2 mobile-center auto-wrap">
 			<div class="container">
-				<h2>The best business services</h2>
-				<div class="services">
-				<?php $i = 1; while($services->have_posts()): ?>
-					<?php $services->the_post(); ?>
+				<h2>The best business auto</h2>
+				<div class="auto">
+				<?php while($auto->have_posts()): ?>
+					<?php $auto->the_post(); ?>
 
-					<div class="services__item wow <?php echo ($i < 4) ? 'fadeInDown' : 'fadeInUp'; ?>">
+					<div class="auto__item wow">
                         <?php the_post_thumbnail('full'); ?>
 						<h3><?php the_title(); ?></h3>
 						<p><?php the_excerpt(); ?></p>
 						<a href="<?php the_permalink(); ?>" class="btn">Read more</a>
 					</div>
 
-					<?php $i++; endwhile; ?>
+					<?php endwhile; ?>
                 </div>
             </div>
         </section>
