@@ -70,6 +70,7 @@ get_header();
 	<?php endif; ?>
     <?php wp_reset_postdata(); ?>
 
+    git add --all && git commit -m "+ check live template" && git push
 
 	<section class="well1 ins4 bg-image">
 		<div class="container">
