@@ -1429,13 +1429,49 @@ footer .copyright a:hover {
 }
 
 /* services */
-.services-wrap h2 {
+.auto-wrap h2 {
 	margin-bottom: 40px;
 }
 
-.services {
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	grid-template-rows: repeat(2, 1fr);
-	grid-gap: 30px;
+/*.auto {*/
+/*	display: grid;*/
+/*	grid-template-columns: repeat(3, 1fr);*/
+/*	grid-template-rows: repeat(2, 1fr);*/
+/*	grid-gap: 30px;*/
+/*}*/
+
+.auto__item {
+	/*margin: 20px;*/
+	padding: 30px;
+	width: 30%;
+	/*border: 2px solid #ddd;*/
 }
+
+.auto__item p {
+	flex-grow: 1;
+}
+
+.auto-list {
+	display: flex;
+	align-items: center;
+	margin-bottom: 40px;
+	padding-bottom: 40px;
+	border-bottom: 2px solid #ccc;
+}
+.auto-list__item {
+	margin: 10px;
+	padding: 10px;
+	width: 130px;
+	font-size: 16px;
+	font-weight: bold;
+	text-align: center;
+	text-transform: capitalize;
+	border: 2px solid #ccc;
+	cursor: pointer;
+	transition: all .4s ease;
+}
+.auto-list__item:hover {
+	color: white;
+	background: #333;
+}
+

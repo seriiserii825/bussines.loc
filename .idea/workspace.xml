@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="253c7966-6024-4dcc-be17-b076f7e67266" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/bussines.loc/assets/js/isotope.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/bussines.loc/archive-services.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/bussines.loc/archive-auto.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/bussines.loc/inc/post-type.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/bussines.loc/inc/post-type.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/bussines.loc/archive-auto.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/bussines.loc/archive-auto.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/bussines.loc/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/bussines.loc/assets/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/bussines.loc/assets/js/custom.js" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/bussines.loc/assets/js/custom.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/bussines.loc/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/bussines.loc/functions.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -13,14 +16,14 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.6536403">
+    <splitter split-orientation="horizontal" split-proportion="0.5289079">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/wp-content/themes/bussines.loc/archive-auto.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="396">
-                  <caret line="24" column="30" selection-start-line="24" selection-start-column="30" selection-end-line="24" selection-end-column="30" />
+                <state relative-caret-position="638">
+                  <caret line="57" column="78" selection-start-line="57" selection-start-column="78" selection-end-line="57" selection-end-column="78" />
                   <folding>
                     <element signature="e#6#36#0#PHP" expanded="true" />
                   </folding>
@@ -28,11 +31,11 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/wp-content/themes/bussines.loc/inc/post-type.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="550">
-                  <caret line="117" column="53" selection-start-line="117" selection-start-column="53" selection-end-line="117" selection-end-column="53" />
+                <state relative-caret-position="572">
+                  <caret line="125" column="35" selection-start-line="125" selection-start-column="35" selection-end-line="125" selection-end-column="35" />
                 </state>
               </provider>
             </entry>
@@ -44,8 +47,17 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/wp-content/themes/bussines.loc/assets/css/style.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="368">
-                  <caret line="1425" selection-start-line="1425" selection-end-line="1425" />
+                <state relative-caret-position="264">
+                  <caret line="1445" column="10" selection-start-line="1445" selection-start-column="10" selection-end-line="1445" selection-end-column="10" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/wp-content/themes/bussines.loc/assets/js/custom.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="716">
+                  <caret line="39" column="12" selection-start-line="39" selection-start-column="12" selection-end-line="39" selection-end-column="12" />
                 </state>
               </provider>
             </entry>
@@ -102,7 +114,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/wp-config.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/bussines.loc/assets/js/custom.js" />
         <option value="$PROJECT_DIR$/wp-content/themes/bussines.loc/assets/js/superfish.js" />
         <option value="$PROJECT_DIR$/wp-content/themes/bussines.loc/template-parts/content-page.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/bussines.loc/template-parts/content.php" />
@@ -124,7 +135,6 @@
         <option value="$PROJECT_DIR$/wp-content/themes/bussines.loc/assets/index-5.html" />
         <option value="$PROJECT_DIR$/wp-content/themes/bussines.loc/header.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/bussines.loc/assets/index.html" />
-        <option value="$PROJECT_DIR$/wp-content/themes/bussines.loc/functions.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/bussines.loc/assets/js/script.js" />
         <option value="$PROJECT_DIR$/wp-content/themes/bussines.loc/front-page.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/bussines.loc/inc/carbon-fields/home.php" />
@@ -134,10 +144,13 @@
         <option value="$PROJECT_DIR$/wp-content/themes/bussines.loc/inc/carbon-fields/awards.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/bussines.loc/page-about.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/bussines.loc/footer.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/bussines.loc/assets/css/style.css" />
         <option value="$PROJECT_DIR$/wp-content/themes/bussines.loc/archive-services.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/bussines.loc/archive-auto.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/bussines.loc/inc/post-type.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/bussines.loc/assets/js/isotope.js" />
+        <option value="$PROJECT_DIR$/wp-content/themes/bussines.loc/functions.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/bussines.loc/assets/js/custom.js" />
+        <option value="$PROJECT_DIR$/wp-content/themes/bussines.loc/assets/css/style.css" />
+        <option value="$PROJECT_DIR$/wp-content/themes/bussines.loc/archive-auto.php" />
       </list>
     </option>
   </component>
@@ -155,80 +168,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope">
-        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
-          <expand>
-            <path>
-              <item name="wp-bussines.loc" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="D:\OSPanel\domains\wp-bussines.loc" type="442cc68d:ScopeViewTreeModel$RootNode" />
-            </path>
-            <path>
-              <item name="wp-bussines.loc" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="D:\OSPanel\domains\wp-bussines.loc" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="wp-content" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="wp-bussines.loc" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="D:\OSPanel\domains\wp-bussines.loc" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="wp-content" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="themes" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="wp-bussines.loc" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="D:\OSPanel\domains\wp-bussines.loc" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="wp-content" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="themes" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="bussines.loc" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="wp-bussines.loc" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="D:\OSPanel\domains\wp-bussines.loc" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="wp-content" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="themes" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="bussines.loc" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="assets" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="wp-bussines.loc" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="D:\OSPanel\domains\wp-bussines.loc" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="wp-content" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="themes" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="bussines.loc" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="assets" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="js" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="wp-bussines.loc" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="D:\OSPanel\domains\wp-bussines.loc" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="wp-content" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="themes" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="bussines.loc" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="inc" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="wp-bussines.loc" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="D:\OSPanel\domains\wp-bussines.loc" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="wp-content" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="themes" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="bussines.loc" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="inc" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="carbon-fields" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="wp-bussines.loc" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="D:\OSPanel\domains\wp-bussines.loc" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="wp-includes" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="wp-bussines.loc" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="D:\OSPanel\domains\wp-bussines.loc" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="wp-includes" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="theme-compat" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -276,6 +215,89 @@
               <item name="bussines.loc" type="462c0819:PsiDirectoryNode" />
               <item name="assets" type="462c0819:PsiDirectoryNode" />
               <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope">
+        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
+          <expand>
+            <path>
+              <item name="wp-bussines.loc" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="D:\OSPanel\domains\wp-bussines.loc" type="442cc68d:ScopeViewTreeModel$RootNode" />
+            </path>
+            <path>
+              <item name="wp-bussines.loc" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="D:\OSPanel\domains\wp-bussines.loc" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="wp-content" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="wp-bussines.loc" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="D:\OSPanel\domains\wp-bussines.loc" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="wp-content" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="themes" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="wp-bussines.loc" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="D:\OSPanel\domains\wp-bussines.loc" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="wp-content" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="themes" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="bussines.loc" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="wp-bussines.loc" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="D:\OSPanel\domains\wp-bussines.loc" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="wp-content" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="themes" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="bussines.loc" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="assets" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="wp-bussines.loc" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="D:\OSPanel\domains\wp-bussines.loc" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="wp-content" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="themes" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="bussines.loc" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="assets" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="css" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="wp-bussines.loc" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="D:\OSPanel\domains\wp-bussines.loc" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="wp-content" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="themes" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="bussines.loc" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="assets" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="js" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="wp-bussines.loc" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="D:\OSPanel\domains\wp-bussines.loc" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="wp-content" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="themes" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="bussines.loc" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="inc" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="wp-bussines.loc" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="D:\OSPanel\domains\wp-bussines.loc" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="wp-content" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="themes" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="bussines.loc" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="inc" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="carbon-fields" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="wp-bussines.loc" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="D:\OSPanel\domains\wp-bussines.loc" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="wp-includes" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="wp-bussines.loc" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="D:\OSPanel\domains\wp-bussines.loc" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="wp-includes" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="theme-compat" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
           </expand>
           <select />
@@ -333,12 +355,13 @@
       <workItem from="1559591574325" duration="2233000" />
       <workItem from="1559637455235" duration="17637000" />
       <workItem from="1559672163511" duration="4876000" />
-      <workItem from="1559715416419" duration="2324000" />
+      <workItem from="1559715416419" duration="2402000" />
+      <workItem from="1559721003857" duration="9640000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="75967000" />
+    <option name="totallyTimeSpent" value="85685000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -385,13 +408,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="676">
           <caret line="984" selection-start-line="984" selection-end-line="984" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/bussines.loc/assets/js/custom.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="1" column="21" selection-start-line="1" selection-start-column="21" selection-end-line="1" selection-end-column="21" />
         </state>
       </provider>
     </entry>
@@ -630,17 +646,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/bussines.loc/functions.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-          <folding>
-            <element signature="n#bussines_content_width#0;n#!!top" />
-            <element signature="n#bussines_widgets_init#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/bussines.loc/front-page.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="22">
@@ -652,13 +657,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="672">
           <caret line="50" column="6" selection-start-line="50" selection-start-column="6" selection-end-line="50" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/bussines.loc/assets/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="1425" selection-start-line="1425" selection-end-line="1425" />
         </state>
       </provider>
     </entry>
@@ -679,20 +677,52 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/bussines.loc/archive-auto.php">
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/bussines.loc/inc/post-type.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="24" column="30" selection-start-line="24" selection-start-column="30" selection-end-line="24" selection-end-column="30" />
+        <state relative-caret-position="572">
+          <caret line="125" column="35" selection-start-line="125" selection-start-column="35" selection-end-line="125" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/bussines.loc/assets/js/isotope.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="2" selection-start-column="2" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/bussines.loc/functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="110" column="39" selection-start-line="110" selection-start-column="39" selection-end-line="110" selection-end-column="39" />
           <folding>
-            <element signature="e#6#36#0#PHP" expanded="true" />
+            <element signature="n#bussines_content_width#0;n#!!top" />
+            <element signature="n#bussines_widgets_init#0;n#!!top" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/bussines.loc/inc/post-type.php">
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/bussines.loc/assets/js/custom.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="117" column="53" selection-start-line="117" selection-start-column="53" selection-end-line="117" selection-end-column="53" />
+        <state relative-caret-position="716">
+          <caret line="39" column="12" selection-start-line="39" selection-start-column="12" selection-end-line="39" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/bussines.loc/assets/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="1445" column="10" selection-start-line="1445" selection-start-column="10" selection-end-line="1445" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/bussines.loc/archive-auto.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="638">
+          <caret line="57" column="78" selection-start-line="57" selection-start-column="78" selection-end-line="57" selection-end-column="78" />
+          <folding>
+            <element signature="e#6#36#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

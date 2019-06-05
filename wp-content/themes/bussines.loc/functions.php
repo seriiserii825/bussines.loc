@@ -108,6 +108,7 @@ function bussines_scripts() {
 	wp_enqueue_script( 'business-superfish-js', get_template_directory_uri() . '/assets/js/superfish.js', array('jquery'), null, true );
 	wp_enqueue_script( 'business-camera-js', get_template_directory_uri() . '/assets/js/camera.js', array('jquery'), null, true );
 	wp_enqueue_script( 'business-wow-js', get_template_directory_uri() . '/assets/js/wow.js', array('jquery'), null, true );
+	wp_enqueue_script( 'business-isotope-js', get_template_directory_uri() . '/assets/js/isotope.js', array('jquery'), null, true );
 	wp_enqueue_script( 'business-slick.min-js', get_template_directory_uri() . '/assets/js/slick.min.js', array('jquery'), null, true );
 	wp_enqueue_script( 'business-jquery.magnific-popup.min-js', get_template_directory_uri() . '/assets/js/jquery.magnific-popup.min.js', array('jquery'), null, true );
 	wp_enqueue_script( 'business-custom-js', get_template_directory_uri() . '/assets/js/custom.js', array('jquery'), null, true );

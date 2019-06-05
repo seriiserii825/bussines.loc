@@ -8,33 +8,67 @@ get_header();
 
 
 <main>
-    <?php $auto = new WP_Query([
+<?php
+
+    $auto = new WP_Query([
 		'post_type' => 'auto',
-        'posts_per_page' => -1
-    ]); ?>
+        'posts_per_page' => -1,
+        'orderby' => 'rand'
+    ]);
+
+    $auto_terms = get_terms([
+	    'taxonomy' => 'auto_cat',
+	    'hide_empty' => false
+    ]);
+
+    $all_terms = '';
+
+	foreach ($auto_terms as $term) {
+		$all_terms .= $term->slug . ' ';
+	}
+
+?>
 
 
 	<?php if($auto->have_posts()): ?>
 		<section class="well1 ins2 mobile-center auto-wrap">
 			<div class="container">
 				<h2>The best business auto</h2>
-				<div class="auto">
-				<?php while($auto->have_posts()): ?>
-					<?php $auto->the_post(); ?>
 
-					<div class="auto__item wow">
+                <ul class="auto-list" id="js-auto-list">
+                    <li data-filter="*" class="auto-list__item selected">Все марки</li>
+                    <?php foreach ($auto_terms as $auto_term): ?>
+                    <li data-filter="<?php echo $auto_term->slug; ?>" class="auto-list__item"><?php echo $auto_term->slug; ?></li>
+                    <?php endforeach; ?>
+                </ul>
+
+				<div class="auto" id="js-auto">
+				<?php $i = 1; while($auto->have_posts()): ?>
+					<?php
+						$auto->the_post();
+						$content = get_the_content();
+						$terms_post = wp_get_post_terms($post->ID, 'auto_cat', array('fields' => 'all'));
+						$terms_str = '';
+
+						foreach ($terms_post as $term_post) {
+							$terms_str .= $term_post->slug . ' ';
+						}
+					?>
+
+					<div class="auto__item <?php echo $terms_str; ?>">
                         <?php the_post_thumbnail('full'); ?>
 						<h3><?php the_title(); ?></h3>
-						<p><?php the_excerpt(); ?></p>
+						<p><?php echo wp_trim_words($content, 20); ?></p>
 						<a href="<?php the_permalink(); ?>" class="btn">Read more</a>
 					</div>
 
-					<?php endwhile; ?>
+					<?php $i++; endwhile; ?>
                 </div>
             </div>
         </section>
 		<?php else: ?>
 	<?php endif; ?>
+    <?php wp_reset_postdata(); ?>
 
 
 	<section class="well1 ins4 bg-image">
