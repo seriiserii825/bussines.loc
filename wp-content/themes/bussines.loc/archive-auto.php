@@ -21,11 +21,26 @@ get_header();
 	    'hide_empty' => false
     ]);
 
-    $all_terms = '';
+	$auto_colors = get_terms([
+		'taxonomy' => 'auto_color',
+		'hide_empty' => false
+	]);
 
-	foreach ($auto_terms as $term) {
-		$all_terms .= $term->slug . ' ';
-	}
+	$auto_body = get_terms([
+		'taxonomy' => 'auto_body',
+		'hide_empty' => false
+	]);
+
+	function getStrTerms($termObj){
+		$all_terms = '';
+
+		foreach ($termObj as $term) {
+			$all_terms .= $term->slug . ' ';
+		}
+
+		return $all_terms;
+    }
+
 
 ?>
 
@@ -35,12 +50,41 @@ get_header();
 			<div class="container">
 				<h2>The best business auto</h2>
 
-                <ul class="auto-list" id="js-auto-list">
-                    <li data-filter="*" class="auto-list__item selected">Все марки</li>
-                    <?php foreach ($auto_terms as $auto_term): ?>
-                    <li data-filter="<?php echo $auto_term->slug; ?>" class="auto-list__item"><?php echo $auto_term->slug; ?></li>
-                    <?php endforeach; ?>
-                </ul>
+                <div class="auto-tabs-titles">
+                    <div data-auto-tab="auto-name" class="auto-tabs-title active">Название автомобилей</div>
+                    <div data-auto-tab="auto-color" class="auto-tabs-title">Цвет кузова</div>
+                    <div data-auto-tab="auto-body" class="auto-tabs-title">Тип кузова</div>
+                </div>
+
+                <div class="auto-tabs-list">
+                    <div id="auto-name" class="auto-tabs-list__item">
+                        <ul class="auto-list" id="js-auto-list">
+                            <li data-filter="*" class="auto-list__item selected">Все марки</li>
+		                    <?php foreach ($auto_terms as $auto_term): ?>
+                                <li data-filter="<?php echo $auto_term->slug; ?>" class="auto-list__item"><?php echo $auto_term->slug; ?></li>
+		                    <?php endforeach; ?>
+                        </ul>
+                    </div>
+
+                    <div id="auto-color" class="auto-tabs-list__item">
+                        <ul class="auto-list" id="js-auto-list-colors">
+                            <li data-filter="*" class="auto-list__item">Все марки</li>
+		                    <?php foreach ($auto_colors as $auto_color): ?>
+                                <li data-filter="<?php echo $auto_color->slug; ?>" class="auto-list__item"><?php echo $auto_color->slug; ?></li>
+		                    <?php endforeach; ?>
+                        </ul>
+                    </div>
+
+                    <div id="auto-body" class="auto-tabs-list__item">
+						<ul class="auto-list" id="js-auto-list-body">
+							<li data-filter="*" class="auto-list__item selected">Все марки</li>
+							<?php foreach ($auto_body as $auto_body_item): ?>
+								<li data-filter="<?php echo $auto_body_item->slug; ?>" class="auto-list__item"><?php echo $auto_body_item->slug; ?></li>
+							<?php endforeach; ?>
+						</ul>
+                    </div>
+                </div>
+
 
 				<div class="auto" id="js-auto">
 				<?php $i = 1; while($auto->have_posts()): ?>
@@ -48,10 +92,20 @@ get_header();
 						$auto->the_post();
 						$content = get_the_content();
 						$terms_post = wp_get_post_terms($post->ID, 'auto_cat', array('fields' => 'all'));
+						$terms_colors = wp_get_post_terms($post->ID, 'auto_color', array('fields' => 'all'));
+						$terms_body = wp_get_post_terms($post->ID, 'auto_body', array('fields' => 'all'));
 						$terms_str = '';
 
 						foreach ($terms_post as $term_post) {
 							$terms_str .= $term_post->slug . ' ';
+						}
+
+						foreach ($terms_colors as $term_color) {
+							$terms_str .= $term_color->slug . ' ';
+						}
+
+						foreach ($terms_body as $term_body_item) {
+							$terms_str .= $term_body_item->slug . ' ';
 						}
 					?>
 

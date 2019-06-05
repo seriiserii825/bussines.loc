@@ -17,7 +17,7 @@ jQuery(document).ready(function($) {
 		});
 	};
 
-	let isotope = function(){
+	let isotopeName = function(){
 		// init Isotope
 		let jsAuto = $('#js-auto');
         jsAuto.isotope({
@@ -45,8 +45,83 @@ jQuery(document).ready(function($) {
 
 	};
 
+	let isotopeColors = function(){
+		// init Isotope
+		let jsAuto = $('#js-auto');
+		jsAuto.isotope({
+			// options
+			itemSelector: '.auto__item',
+			layoutMode: 'fitRows'
+		});
+
+		// filter items on button click
+		$('#js-auto-list-colors').on( 'click', 'li', function() {
+			if($(this).hasClass('selected')){
+				return false;
+			}
+			$('#js-auto-list-colors li').removeClass('selected');
+			$(this).addClass('selected');
+
+			let filterValue = $(this).data('filter');
+			if(filterValue === '*'){
+				jsAuto.isotope({ filter: '*' });
+			}
+			jsAuto.isotope({ filter: '.' + filterValue });
+
+			return false;
+		});
+
+	};
+
+	let isotopeBody = function(){
+		// init Isotope
+		let jsAuto = $('#js-auto');
+		jsAuto.isotope({
+			// options
+			itemSelector: '.auto__item',
+			layoutMode: 'fitRows'
+		});
+
+		// filter items on button click
+		$('#js-auto-list-body').on( 'click', 'li', function() {
+			if($(this).hasClass('selected')){
+				return false;
+			}
+			$('#js-auto-list-body li').removeClass('selected');
+			$(this).addClass('selected');
+
+			let filterValue = $(this).data('filter');
+			if(filterValue === '*'){
+				jsAuto.isotope({ filter: '*' });
+			}
+			jsAuto.isotope({ filter: '.' + filterValue });
+
+			return false;
+		});
+
+	};
+
+	let autoTabs = function(){
+		let autoTabsTitle = $('.auto-tabs-title');
+		let autoTabListItem = $('.auto-tabs-list__item');
+
+		autoTabsTitle.on('click', function(){
+		    let dataTab = $(this).data('auto-tab');
+		    let id = '#' + dataTab;
+            autoTabsTitle.removeClass('active');
+			$(this).addClass('active');
+			autoTabListItem.hide();
+            $(id).fadeIn();
+		});
+
+		autoTabListItem.eq(0).fadeIn();
+	};
+
 	feedPopup();
-	isotope();
+	isotopeName();
+	isotopeColors();
+	isotopeBody();
+	autoTabs();
 
 
 });

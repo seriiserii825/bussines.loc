@@ -1454,9 +1454,6 @@ footer .copyright a:hover {
 .auto-list {
 	display: flex;
 	align-items: center;
-	margin-bottom: 40px;
-	padding-bottom: 40px;
-	border-bottom: 2px solid #ccc;
 }
 .auto-list__item {
 	margin: 10px;
@@ -1475,3 +1472,33 @@ footer .copyright a:hover {
 	background: #333;
 }
 
+.auto-tabs-list {
+	margin-bottom: 40px;
+	padding-bottom: 40px;
+	border-bottom: 2px solid #ccc;
+}
+.auto-tabs-list__item {
+	display: none;
+}
+.auto-tabs-titles {
+	display: flex;
+	align-items: center;
+	margin-bottom: 30px;
+}
+.auto-tabs-title {
+	margin-right: 30px;
+	padding: 10px 0 4px 0;
+	font-size: 16px;
+	font-weight: bold;
+	color: #888;
+	cursor: pointer;
+	transition: all .4s ease;
+	border-bottom: 1px solid transparent;
+}
+.auto-tabs-title:hover {
+	color: #000;
+}
+.auto-tabs-title.active {
+	color: #000;
+	border-bottom: 1px solid #cc6863;
+}
