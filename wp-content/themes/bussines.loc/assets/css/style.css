@@ -1502,3 +1502,11 @@ footer .copyright a:hover {
 	color: #000;
 	border-bottom: 1px solid #cc6863;
 }
+/*help*/
+
+.help {
+	background-size: cover;
+}
+.help-list li {
+	height: 70px;
+}

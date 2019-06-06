@@ -124,27 +124,47 @@ get_header();
 	<?php endif; ?>
     <?php wp_reset_postdata(); ?>
 
-	<section class="well1 ins4 bg-image">
+	<?php
+		$help_title = carbon_get_theme_option('crb_help_title') ? carbon_get_theme_option('crb_help_title') : 'Test title' ;
+		$help_text = carbon_get_theme_option('crb_help_text') ? carbon_get_theme_option('crb_help_text') : 'Test text' ;
+		$help_bg_color = carbon_get_theme_option('crb_help_bg_color') ? carbon_get_theme_option('crb_help_bg_color') : '' ;
+		$help_image_id = carbon_get_theme_option('crb_help_image') ? carbon_get_theme_option('crb_help_image') : '' ;
+		$help_image_url = wp_get_attachment_image_src($help_image_id, 'full')[0];
+		$help_list = carbon_get_theme_option('crb_help_list');
+
+		$count_list = count($help_list);
+
+		$count_list_half = $count_list / 2;
+
+		$first_help_list = array_slice($help_list, 0, $count_list_half);
+		$second_help_list = array_slice($help_list, $count_list_half);
+	?>
+
+	<section class="well1 ins4 help" style="
+										background-color: <?php echo $help_bg_color; ?>;
+										background-image: url(<?php echo $help_image_url; ?>);
+										background-repeat: no-repeat;
+										background-position: center;
+										  background-size: cover;
+									" >
 		<div class="container">
 			<div class="row">
 				<div class="grid_7 preffix_5">
-					<h2>How we can help?</h2>
-					<p>Curabitur pellentesque, turpis sit amet iaculis condimentum, urna mi aliquet turpis, itae pharetra mauris eros non arcu. Aenean felis augue, dignissim in tempus eget, cursus sit amet sem? Cras vehicula vehicula nunc id fringilla?</p>
+					<h2><?php echo $help_title; ?></h2>
+                    <p><?php echo $help_text; ?></p>
 					<div class="row off4">
 						<div class="grid_3">
-							<ul class="marked-list wow fadeInRight">
-								<li><a href="#">Praesent vestibulum molestie</a></li>
-								<li><a href="#">Aenean nonummy hendrerit</a></li>
-								<li><a href="#">Vivamus eget nibh</a></li>
-								<li><a href="#">Etiam cursus leo vel metus</a></li>
+							<ul class="marked-list wow fadeInRight help-list">
+                                <?php foreach ($first_help_list as $item): ?>
+								<li><a href="#"><?php echo $item['crb_help_list_text']; ?></a></li>
+								<?php endforeach; ?>
 							</ul>
 						</div>
 						<div class="grid_3">
-							<ul data-wow-delay="0.2s" class="marked-list wow fadeInRight">
-								<li><a href="#">Donec in velit vel ipsum auctor</a></li>
-								<li><a href="#">Vestibulum iaculis lacinia est</a></li>
-								<li><a href="#">Proin dictum elementum velit</a></li>
-								<li><a href="#">Fusce euismod consequat ante</a></li>
+							<ul data-wow-delay="0.2s" class="marked-list wow fadeInRight help-list">
+								<?php foreach ($second_help_list as $item): ?>
+                                    <li><a href="#"><?php echo $item['crb_help_list_text']; ?></a></li>
+								<?php endforeach; ?>
 							</ul>
 						</div>
 					</div>
@@ -152,93 +172,43 @@ get_header();
 			</div>
 		</div>
 	</section>
+
 	<section class="well1">
 		<div class="container">
 			<h2 class="mobile-center">Price list</h2>
 			<div class="row">
 				<div class="grid_4">
 					<table class="wow fadeInUp">
+                        <?php $price_list_1 = carbon_get_theme_option('crb_price_list_1'); ?>
+                        <?php foreach($price_list_1 as $item): ?>
 						<tr>
-							<td>Suspendisse sollicitudin velit sed leo</td>
-							<td>$ 32.00</td>
+							<td><?php echo $item['crb_price_list_text']; ?></td>
+							<td> от <?php echo $item['crb_price_list_money']; ?> рублей</td>
 						</tr>
-						<tr>
-							<td>Ut pharetra augue nec augue</td>
-							<td>$ 27.00</td>
-						</tr>
-						<tr>
-							<td>Nam elit agna endrerit sit amet</td>
-							<td>$ 16.00</td>
-						</tr>
-						<tr>
-							<td>Tincidunt ac viverra sed nulla</td>
-							<td>$ 42.00</td>
-						</tr>
-						<tr>
-							<td>Donec porta diam eu massa</td>
-							<td>$ 50.00</td>
-						</tr>
-						<tr>
-							<td>Quisque diam lorem interdum vitae</td>
-							<td>$ 90.00</td>
-						</tr>
+                        <?php endforeach; ?>
 					</table>
 				</div>
 				<div class="grid_4">
 					<table data-wow-delay="0.2s" class="wow fadeInUp">
-						<tr>
-							<td>Tincidunt ac viverra sed nulla</td>
-							<td>$ 42.00</td>
-						</tr>
-						<tr>
-							<td>Donec porta diam eu massa</td>
-							<td>$ 50.00</td>
-						</tr>
-						<tr>
-							<td>Quisque diam lorem interdum vitae</td>
-							<td>$ 32.00</td>
-						</tr>
-						<tr>
-							<td>Scelerisque vitae pede</td>
-							<td>$ 27.00</td>
-						</tr>
-						<tr>
-							<td>Donec eget tellus non erat</td>
-							<td>$ 16.00</td>
-						</tr>
-						<tr>
-							<td>Lacinia fermentum</td>
-							<td>$ 90.00</td>
-						</tr>
+						<?php $price_list_2 = carbon_get_theme_option('crb_price_list_2'); ?>
+						<?php foreach($price_list_2 as $item): ?>
+                            <tr>
+                                <td><?php echo $item['crb_price_list_text']; ?></td>
+                                <td> от <?php echo $item['crb_price_list_money']; ?> рублей</td>
+                            </tr>
+						<?php endforeach; ?>
 					</table>
 				</div>
 				<div class="grid_4">
 					<table data-wow-delay="0.4s" class="wow fadeInUp">
-						<tr>
-							<td>Donec in velit vel ipsum pulvinar</td>
-							<td>$ 27.00</td>
-						</tr>
-						<tr>
-							<td>Vestibulum iaculis lacinia est</td>
-							<td>$ 42.00</td>
-						</tr>
-						<tr>
-							<td>Proin dictum elementum velit</td>
-							<td>$ 50.00</td>
-						</tr>
-						<tr>
-							<td>Fusce euismod consequat ante</td>
-							<td>$ 32.00</td>
-						</tr>
-						<tr>
-							<td>Lorem ipsum dolor sit amet</td>
-							<td>$ 16.00</td>
-						</tr>
-						<tr>
-							<td>Consectetuer adipiscing elit</td>
-							<td>FREE</td>
-						</tr>
-					</table>
+						<?php $price_list_3 = carbon_get_theme_option('crb_price_list_3'); ?>
+						<?php foreach($price_list_3 as $item): ?>
+                            <tr>
+                                <td><?php echo $item['crb_price_list_text']; ?></td>
+                                <td> от <?php echo $item['crb_price_list_money']; ?> рублей</td>
+                            </tr>
+						<?php endforeach; ?>
+                    </table>
 				</div>
 			</div>
 		</div>

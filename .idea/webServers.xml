@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="7594fcf1-f520-43a4-87ae-7a279ce6153f" name="bussines" url="http://ftp14.hostland.ru">
+        <fileTransfer host="ftp14.hostland.ru" port="1024" rootFolder="/home/host1670806/host1670806.hostland.pro/htdocs/test" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="1024" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

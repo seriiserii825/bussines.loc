@@ -23,6 +23,44 @@ Container::make('theme_options', __('Theme Options'))
 				'del' => __('Strike'),
 			))
 	))
+	/**
+	 * How can you help
+	 */
+	->add_tab(__('How we can help'), array(
+		Field::make('text', 'crb_help_title', 'Help title'),
+		Field::make('rich_text', 'crb_help_text', 'Help text'),
+		Field::make( 'complex', 'crb_help_list', 'Help List' )
+			->set_layout( 'tabbed-horizontal' )
+			->add_fields( array(
+				Field::make( 'text', 'crb_help_list_text', 'Help list text' ),
+			) ),
+		Field::make( 'color', 'crb_help_bg_color', 'Help block background color' ),
+		Field::make( 'image', 'crb_help_image', 'Help block image' )
+	))
+	/**
+	 * Price list
+	 */
+	->add_tab(__('Price list'), array(
+		Field::make('text', 'crb_price_list_title', 'Price list title'),
+		Field::make( 'complex', 'crb_price_list_1', 'Price list 1' )
+			->set_layout( 'tabbed-horizontal' )
+			->add_fields( array(
+				Field::make( 'text', 'crb_price_list_text', 'Price list text' ),
+				Field::make( 'text', 'crb_price_list_money', 'Price list money' ),
+			) ),
+		Field::make( 'complex', 'crb_price_list_2', 'Price list 2' )
+			->set_layout( 'tabbed-vertical' )
+			->add_fields( array(
+				Field::make( 'text', 'crb_price_list_text', 'Price list text' ),
+				Field::make( 'text', 'crb_price_list_money', 'Price list money' ),
+			) ),
+		Field::make( 'complex', 'crb_price_list_3', 'Price list 3' )
+			->set_layout( 'tabbed-vertical' )
+			->add_fields( array(
+				Field::make( 'text', 'crb_price_list_text', 'Price list text' ),
+				Field::make( 'text', 'crb_price_list_money', 'Price list money' ),
+			) ),
+	))
 	//social icons in footer
 	->add_tab(__('Social icons in footer'), array(
 		Field::make( 'complex', 'crb_social_icons', 'Advanced options' )
